@@ -1,4 +1,6 @@
-import { Welcome } from "../welcome/welcome";
+import Hero from "../components/Hero";
+import HomePage from "../components/Homepage";
+import NewsSection from "../components/NewsPage";
 
 export function meta() {
   return [
@@ -8,5 +10,11 @@ export function meta() {
 }
 
 export default function Home() {
-  return <Welcome />;
+  return (
+    <main>
+      <Hero />
+      <HomePage />
+      <NewsSection />
+    </main>
+  );
 }
