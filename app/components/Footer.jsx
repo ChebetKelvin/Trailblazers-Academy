@@ -89,7 +89,7 @@ export default function Footer() {
             <FaPhoneAlt /> <span>+254 720206783</span>
           </p>
           <p className="flex items-center space-x-2 hover:text-yellow-300 transition">
-            <FaEnvelope /> <span>Miritikelvin0@gmail.com</span>
+            <FaEnvelope /> <span>info@merutrailblazers.ac.ke</span>
           </p>
         </div>
       </div>

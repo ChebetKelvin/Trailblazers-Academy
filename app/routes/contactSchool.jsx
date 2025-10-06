@@ -80,7 +80,7 @@ export default function ContactPage() {
               </div>
               <div className="flex items-center space-x-4">
                 <FaEnvelope className="text-[#0097d7] text-2xl" />
-                <p className="text-lg">Miritikelvin0@gmail.com</p>
+                <p className="text-lg">info@merutrailblazers.ac.ke</p>
               </div>
               <div className="flex items-center space-x-4">
                 <FaGlobe className="text-[#0097d7] text-2xl" />

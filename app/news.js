@@ -1,13 +1,14 @@
 const newsData = [
   {
     id: 1,
-    image: "/sports.jpg",
-    title: "Annual Sports Day – A Joyful Celebration",
-    date: "September 15, 2025",
-    desc: "Our students showcased their talents in running, football, and fun activities. Families cheered, and the event was full of laughter.",
+    image: "/admissions.jpg",
+    title: "January 2026 Intake Now Open",
+    date: "October 6, 2025",
+    desc: "Admissions for the January 2026 term are now open! Enroll your child today through our online portal or visit the school for assistance.",
     fullDesc:
-      "The Sports Day was a highlight of the year! Students participated in athletics, football matches, sack races, and more. Parents and teachers joined the fun, cheering and celebrating the spirit of teamwork and healthy competition.",
+      "We’re thrilled to announce that admissions for our January 2026 intake are now open at Meru Trailblazers Academy! Applications are available both online and at the school office. Parents are encouraged to register early to secure placement for their children. Our school provides a nurturing environment with a Competency-Based Curriculum (CBC), dedicated teachers, and modern facilities.\n\nTo apply online, visit our Admissions page or contact us through the details below:\n📞 Phone: +254 712 345 678\n✉️ Email: info@merutrailblazers.ac.ke\n📍 Location: Meru Town, Kenya\n\nJoin us today — where learning begins with curiosity and grows with confidence!",
   },
+
   {
     id: 2,
     image: "/studying.jpg",

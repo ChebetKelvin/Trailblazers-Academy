@@ -5,9 +5,7 @@ import {
   FaBookOpen,
   FaChalkboardTeacher,
   FaFutbol,
-  FaMusic,
   FaLaptop,
-  FaLeaf,
 } from "react-icons/fa";
 
 export default function AboutPage() {
@@ -15,7 +13,7 @@ export default function AboutPage() {
     <div className="font-sans text-gray-800">
       {/* Hero Section */}
       <section
-        className="relative min-h-[60vh] bg-[url('https://scontent.fnbo9-1.fna.fbcdn.net/v/t39.30808-6/475979642_599967799456456_6400914091058201724_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHi9qL9EOIznPlO6iXy78T__cacESE5RE39xpwRITlETUNreuTVCoAQBx8ILLtHwBZLnEEjx5isisYPqKjzgaG-&_nc_ohc=YyPbUluAuC4Q7kNvwHYUclT&_nc_oc=AdkaK5w9rd13LIzN3-jhjQnyV1oUe1v7M9Op6e2hNl_F2QxrGDX_NpK-qFWIwxT3Bwc&_nc_pt=5&_nc_zt=23&_nc_ht=scontent.fnbo9-1.fna&_nc_gid=0CzP32WveIZHvnG1M50wsA&oh=00_AfbxGIpV3VfaARScCBzlnKA8QgILTU7zU8PeWA25tINliQ&oe=68DDF1AD')] 
+        className="relative min-h-[60vh] bg-[url('/swing.jpg')] bg-fixed
   bg-cover bg-center bg-no-repeat text-white"
       >
         {/* Overlay for better text visibility */}
@@ -90,37 +88,54 @@ export default function AboutPage() {
           {[
             {
               icon: <FaSchool className="text-4xl text-[#0097d7]" />,
-              title: "Our History / Journey",
-              desc: `Founded in 2022, Meru Trailblazers Academy began with a dream to 
-              create a school where children love learning and grow with values.`,
-              bg: "bg-white",
+              title: "Our Journey",
+              desc: `Founded in 2022, Meru Trailblazers Academy was born from a vision to create 
+  a school where children not only love learning but also grow with strong values, 
+  discipline, and curiosity. From our humble beginnings, we’ve continued to nurture 
+  young minds with excellence, care, and a commitment to holistic education.`,
+              bg: "bg-[#e9f8ff]", // unique light-blue shade for consistency
             },
+
             {
               icon: <FaBookOpen className="text-4xl text-[#0097d7]" />,
               title: "Academic Approach",
-              desc: `We blend CBC with creative teaching. Small class sizes ensure 
-              attention, while interactive lessons build teamwork and confidence.`,
+              desc: `At our school, we offer a well-structured learning journey across 
+                    two main levels — Pre-Primary (Creche 2, KG 1, KG 2) and Primary (Grade 1–Grade 6). 
+                    Our curriculum follows the Competency-Based Curriculum (CBC) enriched with 
+                    creative, experiential teaching. With small class sizes, every learner 
+                    receives personalized attention, while interactive lessons inspire curiosity, 
+                    teamwork, and confidence that lasts beyond the classroom.`,
               bg: "bg-[#f0f9fc]",
             },
+
             {
               icon: <FaLaptop className="text-4xl text-[#0097d7]" />,
               title: "Facilities & Environment",
-              desc: `Modern library, computer lab, spacious classrooms, and safe 
-              playgrounds. Spaces designed to foster holistic growth.`,
-              bg: "bg-white",
+              desc: `Our learning environment is purposefully designed to support both academic 
+  and personal growth. We offer a well-equipped computer lab, modern library, 
+  spacious and well-lit classrooms, and secure playgrounds that encourage active play. 
+  Every space is crafted to inspire creativity, collaboration, and holistic development.`,
+              bg: "bg-[#e6f4fa]", // a slightly deeper light blue tone
             },
+
             {
               icon: <FaChalkboardTeacher className="text-4xl text-[#0097d7]" />,
               title: "Our Teachers & Staff",
-              desc: `Passionate mentors who guide learners with patience, care, 
-              and professionalism.`,
-              bg: "bg-[#f0f9fc]",
+              desc: `Our dedicated team of teachers and support staff are the heart of our school. 
+  Each educator is passionate about nurturing potential, guiding learners with 
+  patience, creativity, and professionalism. Together, they create an engaging 
+  and supportive environment where every child feels valued and inspired to excel.`,
+              bg: "bg-[#e8f7fd]", // soft blue variation for visual harmony
             },
+
             {
               icon: <FaFutbol className="text-4xl text-[#0097d7]" />,
               title: "Extracurricular Activities",
-              desc: `A vibrant mix of sports, arts, music, dance, taekwondo, swimming, French, fun clubs, and playtime that nurture creativity, talents, and confidence beyond academics..`,
-              bg: "bg-white",
+              desc: `We offer a vibrant mix of sports, arts, music, dance, taekwondo, swimming, 
+  French, fun clubs, and playtime — all designed to nurture creativity, develop 
+  talents, and build confidence beyond the classroom. Our co-curricular program 
+  helps every learner explore their passions and grow holistically.`,
+              bg: "bg-[#e3f6fb]", // distinct light blue shade for variation
             },
           ].map((item, i) => (
             <motion.div
@@ -189,36 +204,6 @@ export default function AboutPage() {
                 <p className="text-gray-600 text-sm">{value.desc}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Head Teacher Message */}
-      <section className="py-16 bg-[#f0faff]">
-        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-          {/* Image */}
-          <div>
-            <img
-              src="https://images.unsplash.com/photo-1658498616816-541ad6767f94?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGJsYWNrJTIwd29tYW4lMjBpbiUyMGElMjBzdWl0fGVufDB8fDB8fHww"
-              alt="Director"
-              className="rounded-xl shadow-lg object-cover w-1/2"
-            />
-          </div>
-          {/* Text */}
-          <div>
-            <h2 className="text-3xl font-bold text-[#0097d7] mb-6">
-              Message from the Director
-            </h2>
-            <blockquote className="italic text-lg text-gray-600 leading-relaxed mb-4">
-              “Every child deserves to be seen, heard, and supported. At Meru
-              Trailblazers Academy, we are committed to creating a place where
-              children thrive academically and emotionally. We walk hand in hand
-              with parents to ensure each child shines in their own special
-              way.”
-            </blockquote>
-            <p className="mt-4 font-semibold text-gray-800">
-              — Mrs. Jane Mwangi, Director
-            </p>
           </div>
         </div>
       </section>
