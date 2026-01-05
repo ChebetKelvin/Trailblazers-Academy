@@ -8,11 +8,9 @@ import {
   FaUserFriends,
   FaPhoneAlt,
   FaEnvelope,
-  FaComment,
   FaCheckCircle,
   FaFileAlt,
   FaReceipt,
-  FaUsers,
   FaArrowRight,
   FaShieldAlt,
 } from "react-icons/fa";
@@ -168,7 +166,7 @@ export default function AdmissionPage() {
             <p className="text-xl lg:text-2xl opacity-95 max-w-3xl mx-auto font-light leading-relaxed">
               Join Meru Trailblazers Academy and be part of a community that
               values excellence, creativity, and holistic growth. Enroll today
-              for the 2024 academic year.
+              for the 2026 academic year.
             </p>
 
             {/* Quick Stats */}
