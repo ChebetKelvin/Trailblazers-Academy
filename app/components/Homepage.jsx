@@ -420,7 +420,7 @@ export default function HomePage() {
                   {
                     value: (
                       <Counter
-                        end={3}
+                        end={5}
                         suffix="+"
                         startOnView={true}
                         duration={1400}

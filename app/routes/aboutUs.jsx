@@ -17,11 +17,7 @@ import {
   FaEye,
 } from "react-icons/fa";
 
-import { ArrowRight } from "lucide-react";
-
-import { FaBullseye as FaTarget, FaEye as FaEyeAlt } from "react-icons/fa";
-
-// Then in the code, use FaEyeAlt instead of FaEye
+import { FaBullseye as FaTarget } from "react-icons/fa";
 
 export default function AboutPage() {
   return (
@@ -107,29 +103,10 @@ export default function AboutPage() {
             </motion.div>
           </motion.div>
         </div>
-
-        {/* Scroll Indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.5, duration: 1 }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        >
-          <div className="flex flex-col items-center text-white/70">
-            <span className="text-sm mb-2">Scroll to Explore</span>
-            <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
-              <motion.div
-                animate={{ y: [0, 12, 0] }}
-                transition={{ repeat: Infinity, duration: 1.5 }}
-                className="w-1 h-3 bg-white/60 rounded-full mt-2"
-              ></motion.div>
-            </div>
-          </div>
-        </motion.div>
       </section>
 
       {/* Who We Are */}
-      <section className="py-24 bg-gradient-to-b from-white to-blue-50/50">
+      <section className="py-20 bg-gradient-to-b from-white to-blue-50/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div

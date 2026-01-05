@@ -13,7 +13,7 @@ export default function Hero() {
         {/* School image with sophisticated overlay */}
         <div className="absolute inset-0">
           <img
-            src="/kids.webp"
+            src="/schoollife.jpg"
             alt="Meru Trailblazers Academy Students"
             className="w-full h-full object-cover"
           />
@@ -83,7 +83,7 @@ export default function Hero() {
             >
               {[
                 { value: "100%", label: "Quality Education" },
-                { value: "15+", label: "Years Experience" },
+                { value: "5+", label: "Years Experience" },
                 { value: "A", label: "Rating" },
               ].map((stat, index) => (
                 <div key={index} className="text-center">
