@@ -390,7 +390,7 @@ export default function HomePage() {
               </Link>
               <p className="mt-4 text-white/80 text-sm">
                 Or call us at{" "}
-                <span className="font-bold">+254 XXX XXX XXX</span>
+                <span className="font-bold">+254 720 206 783</span>
               </p>
             </div>
 
