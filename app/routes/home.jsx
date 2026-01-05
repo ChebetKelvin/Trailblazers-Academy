@@ -4,8 +4,12 @@ import NewsSection from "../components/NewsPage";
 
 export function meta() {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "Meru Trailblazers Academy | Best School in Meru" },
+    {
+      name: "description",
+      content:
+        "Meru Trailblazers Academy offers quality education, modern facilities, experienced teachers, and comprehensive curriculum. Admissions open for nursery, primary, and secondary students.",
+    },
   ];
 }
 
