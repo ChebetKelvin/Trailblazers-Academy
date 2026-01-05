@@ -34,6 +34,7 @@ export function Layout({ children }) {
   let navLinks = [
     { name: "Home", path: "/" },
     { name: "About Us", path: "/about" },
+    { name: "News", path: "/news" },
     { name: "Admissions", path: "/admissions" },
     { name: "Gallery", path: "/gallery" },
     { name: "Contact", path: "/contact" },
