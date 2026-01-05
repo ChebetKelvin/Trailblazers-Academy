@@ -12,13 +12,6 @@ import {
 } from "react-icons/fa";
 import { motion } from "framer-motion";
 
-/**
- * Counter component
- * - end: target number
- * - duration: animation duration in ms
- * - suffix: string appended (e.g. "+"
- * - startOnView: if true, animation begins when the counter is scrolled into view
- */
 function Counter({ end, duration = 1600, suffix = "", startOnView = true }) {
   const [value, setValue] = useState(0);
   const ref = useRef(null);

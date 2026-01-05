@@ -42,7 +42,7 @@ export default function Hero() {
             >
               <div className="w-2 h-2 bg-[#fb0269] rounded-full animate-pulse"></div>
               <span className="text-sm font-semibold text-white">
-                CBC Excellence Since 2010
+                CBC Excellence Since 2022
               </span>
             </motion.div>
 
