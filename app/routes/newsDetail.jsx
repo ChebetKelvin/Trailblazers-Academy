@@ -70,27 +70,15 @@ export default function NewsDetail() {
     .slice(0, 3);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-slate-50">
+    <div className="min-h-screen bg-gradient-to-b from-white to-slate-50 ">
       {/* Hero Header - Mobile Optimized */}
-      <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white overflow-hidden">
+      <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white overflow-hidden pt-15">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMzAgMTVjLTguMjg0IDAtMTUgNi43MTYtMTUgMTVzNi43MTYgMTUgMTUgMTUgMTUtNi43MTYgMTUtMTUtNi43MTYtMTUtMTUtMTV6IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMSIvPjwvc3ZnPg==')]"></div>
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 lg:py-16 xl:py-24">
-          {/* Back Button - Better Mobile Touch Target */}
-          <motion.button
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            onClick={() => navigate(-1)}
-            className="group inline-flex items-center gap-2 px-4 py-3 md:px-5 md:py-3 bg-white/10 backdrop-blur-sm rounded-xl hover:bg-white/20 transition-all duration-300 mb-6 md:mb-8 active:scale-95"
-            style={{ touchAction: "manipulation" }}
-          >
-            <FaArrowLeft className="group-hover:-translate-x-1 transition-transform text-sm md:text-base" />
-            <span className="text-sm md:text-base">Back</span>
-          </motion.button>
-
           {/* Article Header */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}

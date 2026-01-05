@@ -72,9 +72,7 @@ export function Layout({ children }) {
       <body>
         <nav
           className={`fixed w-full top-0 left-0 z-50 transition-all duration-300 ${
-            isScrolled
-              ? "bg-white text-gray-800 shadow-lg"
-              : "bg-white/80 text-gray-800 backdrop-blur-md"
+            isScrolled ? "bg-white shadow-lg" : "bg-transparent"
           }`}
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -86,7 +84,11 @@ export function Layout({ children }) {
                   alt="Meru Trailblazers Academy Logo"
                   className="h-14 w-14 object-contain"
                 />
-                <span className="font-bold text-lg tracking-wide text-[#0097d7]">
+                <span
+                  className={`font-bold text-lg tracking-wide transition-colors duration-300 ${
+                    isScrolled ? "text-[#0097d7]" : "text-white"
+                  }`}
+                >
                   Meru Trailblazers Academy
                 </span>
               </Link>
@@ -99,21 +101,33 @@ export function Layout({ children }) {
                     to={link.path}
                     className="relative group py-2"
                   >
-                    <span className="text-gray-700 group-hover:text-[#0097d7] transition-colors duration-300">
+                    <span
+                      className={`transition-colors duration-300 ${
+                        isScrolled
+                          ? "text-gray-700 group-hover:text-[#0097d7]" // Normal colors on scroll
+                          : "text-white/90 group-hover:text-white" // Visible white when transparent
+                      }`}
+                    >
                       {link.name}
                     </span>
                     <span
-                      className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-[#0097d7] transition-all duration-300 group-hover:w-full ${
-                        location.pathname === link.path ? "w-full" : ""
-                      }`}
+                      className={`absolute -bottom-1 left-0 h-0.5 transition-all duration-300 ${
+                        location.pathname === link.path
+                          ? "w-full"
+                          : "w-0 group-hover:w-full"
+                      } ${isScrolled ? "bg-[#0097d7]" : "bg-white"}`}
                     />
                   </Link>
                 ))}
 
-                {/* CTA Button */}
+                {/* CTA Button - Adjust border for transparent state */}
                 <Link
                   to="/admissions"
-                  className="ml-4 px-5 py-2 bg-[#0097d7] text-white rounded-lg shadow-md hover:bg-[#007bb5] transition-all duration-300 font-semibold hover:shadow-lg hover:-translate-y-0.5"
+                  className={`ml-4 px-5 py-2 rounded-lg shadow-md transition-all duration-300 font-semibold hover:shadow-lg hover:-translate-y-0.5 ${
+                    isScrolled
+                      ? "bg-[#0097d7] text-white hover:bg-[#007bb5]" // Solid on scroll
+                      : "bg-white/20 text-white backdrop-blur-sm border border-white/30 hover:bg-white/30" // Glass effect when transparent
+                  }`}
                 >
                   Enroll Now
                 </Link>
@@ -123,7 +137,9 @@ export function Layout({ children }) {
               <div className="md:hidden">
                 <button
                   onClick={() => setIsOpen(!isOpen)}
-                  className="p-2 rounded-md text-[#0097d7] hover:bg-gray-100/50 focus:outline-none transition-colors duration-200"
+                  className={`p-2 rounded-md hover:bg-white/20 focus:outline-none transition-colors duration-200 ${
+                    isScrolled ? "text-[#0097d7]" : "text-white"
+                  }`}
                   aria-label="Toggle menu"
                 >
                   {isOpen ? <X size={28} /> : <Menu size={28} />}
@@ -135,10 +151,8 @@ export function Layout({ children }) {
           {/* Mobile Dropdown */}
           <div
             className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden ${
-              isOpen
-                ? "max-h-96 opacity-100 bg-white/95 backdrop-blur-md border-t border-gray-100"
-                : "max-h-0 opacity-0"
-            }`}
+              isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+            } ${isScrolled ? "bg-white" : "bg-white/95 backdrop-blur-md"}`}
           >
             <div className="px-4 pt-2 pb-4 space-y-1">
               {navLinks.map((link) => (
@@ -148,7 +162,11 @@ export function Layout({ children }) {
                   className={`block px-4 py-3 rounded-lg transition-all duration-200 font-medium ${
                     location.pathname === link.path
                       ? "bg-[#0097d7]/10 text-[#0097d7]"
-                      : "text-gray-700 hover:bg-gray-100/50 hover:text-[#0097d7]"
+                      : `${
+                          isScrolled
+                            ? "text-gray-700 hover:bg-gray-100 hover:text-[#0097d7]"
+                            : "text-gray-800 hover:bg-gray-100 hover:text-[#0097d7]"
+                        }`
                   }`}
                   onClick={() => setIsOpen(false)}
                 >
@@ -160,7 +178,11 @@ export function Layout({ children }) {
               <div className="pt-2">
                 <Link
                   to="/admissions"
-                  className="block px-4 py-3 bg-[#0097d7] text-white rounded-lg shadow-md hover:bg-[#007bb5] transition-colors duration-300 font-semibold text-center"
+                  className={`block px-4 py-3 rounded-lg shadow-md transition-colors duration-300 font-semibold text-center ${
+                    isScrolled
+                      ? "bg-[#0097d7] text-white hover:bg-[#007bb5]"
+                      : "bg-[#0097d7] text-white hover:bg-[#007bb5]"
+                  }`}
                   onClick={() => setIsOpen(false)}
                 >
                   Enroll Now

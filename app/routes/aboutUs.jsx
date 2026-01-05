@@ -496,14 +496,6 @@ export default function AboutPage() {
                   <p className="text-lg text-gray-600 leading-relaxed mb-8">
                     {item.desc}
                   </p>
-
-                  <Link
-                    to={`/${item.title.toLowerCase().replace(/ & /g, "-").replace(/ /g, "-")}`}
-                    className="inline-flex items-center gap-2 text-[#0097d7] font-semibold hover:text-[#007bb5] transition-colors group"
-                  >
-                    <span>Learn More</span>
-                    <FaArrowRight className="group-hover:translate-x-2 transition-transform" />
-                  </Link>
                 </div>
 
                 <div

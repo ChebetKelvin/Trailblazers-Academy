@@ -195,7 +195,7 @@ export default function GalleryPage() {
   return (
     <div className="font-sans text-gray-800 overflow-hidden">
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pb-5">
+      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-20 pb-5">
         {/* Background with gradient overlay */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-blue-900/80 via-blue-700/70 to-blue-600/60"></div>
@@ -338,12 +338,6 @@ export default function GalleryPage() {
                   photos
                 </p>
               </div>
-              <button
-                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                className="px-6 py-3 bg-gradient-to-r from-[#0097d7] to-blue-600 text-white font-medium rounded-xl hover:shadow-lg transition-all duration-300"
-              >
-                Back to Top
-              </button>
             </div>
 
             {/* Gallery Grid */}
@@ -435,7 +429,7 @@ export default function GalleryPage() {
                         </div>
                         <button
                           onClick={() => setSelectedImage(image)}
-                          className="text-[#0097d7] hover:text-blue-600 font-medium text-sm flex items-center gap-1"
+                          className="text-[#0097d7] hover:text-blue-600 font-medium text-sm flex items-center gap-1 "
                         >
                           View Full
                           <FaChevronRight className="text-xs" />
