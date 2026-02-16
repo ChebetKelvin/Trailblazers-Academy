@@ -1,0 +1,21 @@
+[33m8413cd7[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m chore: replace react-helmet-async with react-helmet and remove HelmetProvider
+[33m10ab278[m Fix Helmet SSR usage and SEO meta tags
+[33m0fbdced[m  fixed serverless error 500
+[33me8aca86[m implement complete SEO setup with schema markup
+[33m583857c[m Remove react-helmet-async and .npmrc, add schema to index.html
+[33m349d916[m Add npmrc with legacy-peer-deps
+[33mc263d35[m SEO optimization and final updates
+[33m226a5c1[m changed image and uploaded latest images
+[33m42b7278[m updated content
+[33m40e6972[m updated favicon
+[33m7eea555[m updated Meta description
+[33mae68b16[m updated content
+[33m0518667[m fixed navbar links
+[33mbbe7bda[m content update
+[33m57213c7[m updated contact
+[33mbbdecae[m updated content
+[33mb16c269[m updated the responsiveness of sections
+[33m9981c66[m updated the UI
+[33m22f9795[m changed info on about, gallery, contact and footer page and updated the news section with badge
+[33m7eb4096[m innitial commit
+[33mc6a9768[m Initial commit from create-react-router

@@ -1,8 +1,138 @@
 import { Link } from "react-router";
 import { motion } from "framer-motion";
-import { ArrowRight, PlayCircle } from "lucide-react"; // Optional: Install lucide-react for icons
+import { ArrowRight, PlayCircle, Sparkles } from "lucide-react";
+import confetti from "canvas-confetti";
+import { useRef, useCallback } from "react";
 
 export default function Hero() {
+  // Refs to prevent multiple confetti triggers
+  const hasTriggeredWelcomeRef = useRef(false);
+  const hasTriggeredStatsRef = useRef(false);
+
+  // School colors for confetti
+  const schoolColors = ["#0097d7", "#fb0269", "#ffdd00", "#ffffff"];
+
+  // Trigger confetti when "Meru Trailblazers" text appears
+  const triggerWelcomeConfetti = useCallback(() => {
+    if (hasTriggeredWelcomeRef.current) return;
+    hasTriggeredWelcomeRef.current = true;
+
+    // Left side confetti
+    confetti({
+      particleCount: 80,
+      angle: 60,
+      spread: 55,
+      origin: { x: 0.1, y: 0.5 },
+      colors: schoolColors,
+      startVelocity: 25,
+      decay: 0.9,
+    });
+
+    // Right side confetti
+    confetti({
+      particleCount: 80,
+      angle: 120,
+      spread: 55,
+      origin: { x: 0.9, y: 0.5 },
+      colors: schoolColors,
+      startVelocity: 25,
+      decay: 0.9,
+    });
+
+    // Center burst
+    confetti({
+      particleCount: 120,
+      spread: 100,
+      origin: { y: 0.6 },
+      colors: schoolColors,
+      startVelocity: 30,
+      decay: 0.9,
+    });
+
+    // Add some star-shaped confetti for sparkle
+    confetti({
+      particleCount: 30,
+      spread: 70,
+      origin: { y: 0.4 },
+      colors: ["#ffdd00", "#fb0269"],
+      shapes: ["star"],
+      startVelocity: 20,
+    });
+  }, [schoolColors]);
+
+  // Trigger confetti when stats appear
+  const triggerStatsConfetti = useCallback(() => {
+    if (hasTriggeredStatsRef.current) return;
+    hasTriggeredStatsRef.current = true;
+
+    confetti({
+      particleCount: 50,
+      spread: 45,
+      origin: { y: 0.7 },
+      colors: ["#0097d7", "#fb0269", "#ffdd00"],
+      startVelocity: 20,
+      decay: 0.9,
+    });
+  }, []);
+
+  // Handle Apply Now button click
+  const handleApplyClick = useCallback(() => {
+    // Celebration burst
+    confetti({
+      particleCount: 150,
+      spread: 90,
+      origin: { y: 0.6 },
+      colors: schoolColors,
+      startVelocity: 30,
+      decay: 0.9,
+      ticks: 400,
+    });
+
+    // Left cannon
+    setTimeout(() => {
+      confetti({
+        particleCount: 80,
+        angle: 60,
+        spread: 55,
+        origin: { x: 0, y: 0.5 },
+        colors: ["#fb0269", "#ffdd00"],
+      });
+    }, 100);
+
+    // Right cannon
+    setTimeout(() => {
+      confetti({
+        particleCount: 80,
+        angle: 120,
+        spread: 55,
+        origin: { x: 1, y: 0.5 },
+        colors: ["#0097d7", "#ffffff"],
+      });
+    }, 200);
+  }, [schoolColors]);
+
+  // Handle Virtual Tour button click
+  const handleTourClick = useCallback(() => {
+    confetti({
+      particleCount: 60,
+      spread: 70,
+      origin: { y: 0.7 },
+      colors: ["#0097d7", "#ffffff", "#93c5fd"],
+      shapes: ["circle"],
+      startVelocity: 20,
+    });
+
+    // Paper-like confetti
+    confetti({
+      particleCount: 40,
+      spread: 45,
+      origin: { y: 0.5, x: 0.5 },
+      colors: ["#ffdd00", "#fb0269"],
+      shapes: ["square"],
+      startVelocity: 15,
+    });
+  }, []);
+
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-15">
       {/* Premium Background with layered effects */}
@@ -13,7 +143,7 @@ export default function Hero() {
         {/* School image with sophisticated overlay */}
         <div className="absolute inset-0">
           <img
-            src="/schoollife.jpg"
+            src="/gate1.png"
             alt="Meru Trailblazers Academy Students"
             className="w-full h-full object-cover"
           />
@@ -54,9 +184,11 @@ export default function Hero() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4, duration: 0.8 }}
-                  className="bg-gradient-to-r from-[#fb0269] to-pink-500 bg-clip-text text-transparent"
+                  onAnimationComplete={triggerWelcomeConfetti}
+                  className="bg-gradient-to-r from-[#fb0269] to-pink-500 bg-clip-text text-transparent inline-flex items-center gap-2"
                 >
                   Meru Trailblazers
+                  <Sparkles className="w-8 h-8 text-yellow-400 inline-block" />
                 </motion.span>
                 <span className="text-white block">Academy</span>
               </h1>
@@ -79,6 +211,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.8 }}
+              onAnimationComplete={triggerStatsConfetti}
               className="grid grid-cols-3 gap-4 pt-6 border-t border-white/20"
             >
               {[
@@ -104,6 +237,7 @@ export default function Hero() {
             >
               <Link
                 to="/contact"
+                onClick={handleApplyClick}
                 className="group relative px-8 py-4 bg-[#fb0269] text-white font-bold rounded-xl shadow-2xl hover:shadow-3xl hover:shadow-[#fb0269]/30 transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-2"
               >
                 <span>Apply Now</span>
@@ -113,6 +247,7 @@ export default function Hero() {
 
               <Link
                 to="/about"
+                onClick={handleTourClick}
                 className="group px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-bold rounded-xl border border-white/30 hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-2"
               >
                 <PlayCircle className="w-5 h-5" />

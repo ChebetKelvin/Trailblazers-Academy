@@ -16,6 +16,36 @@ import {
 } from "react-icons/fa";
 import { motion } from "framer-motion";
 
+// AdmissionPage.jsx
+export function meta() {
+  return [
+    {
+      title:
+        "Admissions 2024 | Meru Trailblazers Academy - Fees & Requirements",
+    },
+    {
+      name: "description",
+      content:
+        "Apply to Meru Trailblazers Academy. Nursery fees: KES 13,000-13,500/term. Primary: KES 14,000-15,000/term. Admission KES 1,000. Call 0720 206 783.",
+    },
+    {
+      name: "keywords",
+      content:
+        "Meru school admissions, school fees Meru, Creche 2 fees Meru, KG 1 fees Meru, KG 2 fees Meru, Grade 1 fees Meru, Grade 2 fees Meru, Grade 3 fees Meru, Grade 4 fees Meru, Grade 5 fees Meru, Grade 6 fees Meru, nursery school fees Meru, primary school fees Meru",
+    },
+    {
+      property: "og:title",
+      content: "Admissions 2024 - Meru Trailblazers Academy",
+    },
+    {
+      property: "og:description",
+      content:
+        "Nursery & Primary admissions open. Fees from KES 13,000/term. Apply online.",
+    },
+    { property: "og:url", content: "https://merutrailblazers.com/admissions" },
+  ];
+}
+
 export default function AdmissionPage() {
   const navigation = useNavigation();
   const formRef = useRef(null);
@@ -637,7 +667,7 @@ export default function AdmissionPage() {
                                     </option>
                                   ))}
                                 </optgroup>
-                              )
+                              ),
                             )}
                           </select>
                         ) : (

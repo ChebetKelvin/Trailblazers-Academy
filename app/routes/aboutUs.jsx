@@ -19,6 +19,30 @@ import {
 
 import { FaBullseye as FaTarget } from "react-icons/fa";
 
+// AboutPage.jsx
+export function meta() {
+  return [
+    { title: "About Meru Trailblazers Academy | Mission, Vision & Values" },
+    {
+      name: "description",
+      content:
+        "Founded 2022, Meru Trailblazers Academy is a leading CBC school in Meru with 200+ students, 25+ staff, and 98% parent satisfaction. Learn our story.",
+    },
+    {
+      name: "keywords",
+      content:
+        "about Meru Trailblazers, school mission Meru, school vision Meru, school values Meru, CBC school philosophy, holistic education Meru, best teachers Meru",
+    },
+    { property: "og:title", content: "About Meru Trailblazers Academy" },
+    {
+      property: "og:description",
+      content:
+        "Learn about Meru's premier CBC school. Founded 2022, 200+ students, 98% parent satisfaction.",
+    },
+    { property: "og:url", content: "https://merutrailblazers.com/about" },
+  ];
+}
+
 export default function AboutPage() {
   return (
     <div className="font-sans text-gray-800 overflow-hidden">
@@ -28,7 +52,7 @@ export default function AboutPage() {
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-700 to-blue-600 opacity-90"></div>
           <img
-            src="/swing.jpg"
+            src="/school3.jpg"
             alt="Meru Trailblazers Academy Campus"
             className="w-full h-full object-cover"
           />
@@ -445,7 +469,7 @@ export default function AboutPage() {
                 and personal growth. We offer a well-equipped computer lab, modern library, 
                 spacious and well-lit classrooms, and secure playgrounds that encourage active play. 
                 Every space is crafted to inspire creativity, collaboration, and holistic development.`,
-                image: "/Bus.jpg",
+                image: "/update2.png",
                 align: "left",
               },
               {

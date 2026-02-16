@@ -49,7 +49,7 @@ function Counter({ end, duration = 1600, suffix = "", startOnView = true }) {
             }
           });
         },
-        { threshold: [0.4] }
+        { threshold: [0.4] },
       );
       obs.observe(ref.current);
       return () => {
@@ -161,8 +161,8 @@ export default function HomePage() {
               {/* Main Image Container */}
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="/staff.jpg"
-                  alt="Happy children learning at Meru Trailblazers Academy"
+                  src="/update1.png"
+                  alt="School building"
                   className="w-full h-[500px] object-cover"
                 />
                 {/* Overlay Gradient */}

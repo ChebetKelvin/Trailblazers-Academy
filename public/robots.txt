@@ -1,0 +1,13 @@
+# robots.txt for merutrailblazers.com
+
+# Allow all bots to crawl the main site
+User-agent: *
+Allow: /
+
+# Block sensitive or non-public paths
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://merutrailblazers.com/sitemap.xml

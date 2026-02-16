@@ -18,6 +18,28 @@ import {
 } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 
+// GalleryPage.jsx
+export function meta() {
+  return [
+    {
+      title: "School Gallery | Meru Trailblazers Academy - Photos & Activities",
+    },
+    {
+      name: "description",
+      content:
+        "Browse 24+ photos of Meru Trailblazers Academy. See our facilities, students, sports, swimming pool, taekwondo, and school life in Meru.",
+    },
+    { property: "og:title", content: "Gallery - Meru Trailblazers Academy" },
+    {
+      property: "og:description",
+      content:
+        "View photos of our school facilities, students, and activities in Meru.",
+    },
+    { property: "og:url", content: "https://merutrailblazers.com/gallery" },
+    { property: "og:image", content: "https://merutrailblazers.com/fun.jpg" }, // Your best gallery image
+  ];
+}
+
 export default function GalleryPage() {
   const [selectedImage, setSelectedImage] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -548,7 +570,7 @@ export default function GalleryPage() {
                                 url: window.location.href,
                               })
                             : navigator.clipboard.writeText(
-                                window.location.href
+                                window.location.href,
                               )
                         }
                         className="p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-colors"

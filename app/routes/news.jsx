@@ -15,6 +15,23 @@ import {
 import { Calendar, User, Search, ChevronRight } from "lucide-react";
 import newsData from "../news";
 
+// NewsPage.jsx
+export function meta() {
+  return [
+    { title: "Latest News & Updates | Meru Trailblazers Academy" },
+    {
+      name: "description",
+      content:
+        "Latest news, events, and achievements from Meru Trailblazers Academy. School announcements, sports updates, and cultural events in Meru.",
+    },
+    {
+      property: "og:title",
+      content: "News & Updates - Meru Trailblazers Academy",
+    },
+    { property: "og:url", content: "https://merutrailblazers.com/news" },
+  ];
+}
+
 export default function NewsPage() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -39,7 +56,7 @@ export default function NewsPage() {
 
   // Sort by date (newest first)
   const sortedNews = [...filteredNews].sort(
-    (a, b) => formatDateForSort(b.date) - formatDateForSort(a.date)
+    (a, b) => formatDateForSort(b.date) - formatDateForSort(a.date),
   );
 
   return (
@@ -92,7 +109,7 @@ export default function NewsPage() {
                   placeholder="Search news articles..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-12 pr-4 py-3 bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#0097d7] focus:border-transparent shadow-sm"
+                  className="w-full pl-12 pr-4 py-3 text-gray-700 bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#0097d7] focus:border-transparent shadow-sm"
                 />
               </div>
 

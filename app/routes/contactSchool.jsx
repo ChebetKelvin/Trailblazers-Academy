@@ -5,14 +5,11 @@ import {
   FaMapMarkerAlt,
   FaChevronDown,
   FaFacebook,
-  FaTwitter,
   FaInstagram,
-  FaGlobe,
   FaClock,
   FaUser,
   FaPaperPlane,
   FaWhatsapp,
-  FaLinkedin,
   FaYoutube,
   FaStar,
   FaShieldAlt,
@@ -21,6 +18,30 @@ import {
 } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaLocationDot, FaCircleCheck } from "react-icons/fa6";
+
+// ContactPage.jsx
+export function meta() {
+  return [
+    { title: "Contact Meru Trailblazers Academy | Phone, Email & Location" },
+    {
+      name: "description",
+      content:
+        "Contact Meru Trailblazers Academy: 0720 206 783 | info@merutrailblazers.ac.ke. Hours: Mon-Fri 8am-4pm, Sat 9am-1pm. Visit our Meru campus.",
+    },
+    {
+      name: "keywords",
+      content:
+        "contact Meru Trailblazers, Meru school phone number, Meru school email, Meru school location, Meru Trailblazers address, school contact Meru, Meru school WhatsApp, Meru school Facebook",
+    },
+    { property: "og:title", content: "Contact Us - Meru Trailblazers Academy" },
+    {
+      property: "og:description",
+      content:
+        "Get in touch with Meru Trailblazers Academy. Phone, email, and location.",
+    },
+    { property: "og:url", content: "https://merutrailblazers.com/contact" },
+  ];
+}
 
 export default function ContactPage() {
   const [openIndex, setOpenIndex] = useState(null);
@@ -129,25 +150,13 @@ export default function ContactPage() {
       icon: <FaInstagram />,
       name: "Instagram",
       color: "hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500",
-      link: "#",
-    },
-    {
-      icon: <FaTwitter />,
-      name: "Twitter",
-      color: "hover:bg-sky-500",
-      link: "#",
-    },
-    {
-      icon: <FaLinkedin />,
-      name: "LinkedIn",
-      color: "hover:bg-blue-700",
-      link: "#",
+      link: "https://www.instagram.com/merutrailblazersacademy",
     },
     {
       icon: <FaYoutube />,
       name: "YouTube",
       color: "hover:bg-red-600",
-      link: "#",
+      link: "https://www.youtube.com/@merutrailblazersacademy7431",
     },
   ];
 

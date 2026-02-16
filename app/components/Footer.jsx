@@ -1,11 +1,12 @@
-import { Link } from "react-router";
+import { href, Link } from "react-router";
 import {
   FaFacebookF,
-  FaTwitter,
   FaInstagram,
   FaPhoneAlt,
   FaEnvelope,
   FaMapMarkerAlt,
+  FaYoutube,
+  FaWhatsapp,
 } from "react-icons/fa";
 
 export default function Footer() {
@@ -25,8 +26,15 @@ export default function Footer() {
                 icon: <FaFacebookF />,
                 href: "https://web.facebook.com/merutrailblazersacademy/?_rdc=1&_rdr#",
               },
-              { icon: <FaTwitter />, href: "#" },
-              { icon: <FaInstagram />, href: "#" },
+              {
+                icon: <FaYoutube />,
+                href: "https://www.youtube.com/@merutrailblazersacademy7431",
+              },
+              {
+                icon: <FaInstagram />,
+                href: "https://www.instagram.com/merutrailblazersacademy",
+              },
+              { icon: <FaWhatsapp />, href: "https://wa.me/254720206783" },
             ].map((item, index) => (
               <a
                 key={index}
@@ -74,7 +82,7 @@ export default function Footer() {
                 >
                   {item}
                 </li>
-              )
+              ),
             )}
           </ul>
         </div>
