@@ -52,12 +52,12 @@ export default function AboutPage() {
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-700 to-blue-600 opacity-90"></div>
           <img
-            src="/school3.jpg"
+            src="/twitter-image.jpg"
             alt="Meru Trailblazers Academy Campus"
             className="w-full h-full object-cover"
           />
           {/* Multi-layered overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/40 to-transparent"></div>
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-transparent via-black/30 to-black/60"></div>
         </div>
 

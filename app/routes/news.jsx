@@ -1,17 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router";
 import { motion } from "framer-motion";
-import {
-  FaCalendarAlt,
-  FaUser,
-  FaEye,
-  FaSearch,
-  FaFilter,
-  FaNewspaper,
-  FaArrowRight,
-  FaTag,
-  FaBookmark,
-} from "react-icons/fa";
+import { FaEye, FaNewspaper, FaTag, FaBookmark } from "react-icons/fa";
 import { Calendar, User, Search, ChevronRight } from "lucide-react";
 import newsData from "../news";
 

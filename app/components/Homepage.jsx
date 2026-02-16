@@ -161,7 +161,7 @@ export default function HomePage() {
               {/* Main Image Container */}
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="/update1.png"
+                  src="/twitter-image.jpg"
                   alt="School building"
                   className="w-full h-[500px] object-cover"
                 />

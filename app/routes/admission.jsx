@@ -21,7 +21,7 @@ export function meta() {
   return [
     {
       title:
-        "Admissions 2024 | Meru Trailblazers Academy - Fees & Requirements",
+        "Admissions 2026 | Meru Trailblazers Academy - Fees & Requirements",
     },
     {
       name: "description",
