@@ -19,30 +19,104 @@ import {
 
 import { FaBullseye as FaTarget } from "react-icons/fa";
 
-// AboutPage.jsx
 export function meta() {
   return [
-    { title: "About Meru Trailblazers Academy | Mission, Vision & Values" },
+    // === PRIMARY META TAGS ===
+    {
+      title: "About Meru Trailblazers Academy | Mission, Vision & Values", // 58 chars (optimal)
+    },
     {
       name: "description",
       content:
-        "Founded 2022, Meru Trailblazers Academy is a leading CBC school in Meru with 200+ students, 25+ staff, and 98% parent satisfaction. Learn our story.",
+        "Founded 2022: Premier CBC school in Meru with 200+ students, 25+ staff, 98% parent satisfaction. Discover our mission, vision & values.", // 158 chars
     },
     {
       name: "keywords",
       content:
-        "about Meru Trailblazers, school mission Meru, school vision Meru, school values Meru, CBC school philosophy, holistic education Meru, best teachers Meru",
+        "about Meru Trailblazers, school mission Meru, school vision Meru, school values Meru, CBC school philosophy",
     },
-    { property: "og:title", content: "About Meru Trailblazers Academy" },
+
+    // === CRITICAL SEO TAGS ===
+    {
+      name: "robots",
+      content: "index, follow",
+    },
+    {
+      tagName: "link",
+      rel: "canonical",
+      href: "https://merutrailblazers.com/about",
+    },
+
+    // === OPEN GRAPH TAGS ===
+    {
+      property: "og:title",
+      content: "About Meru Trailblazers Academy | Meru's Premier CBC School",
+    },
     {
       property: "og:description",
       content:
-        "Learn about Meru's premier CBC school. Founded 2022, 200+ students, 98% parent satisfaction.",
+        "Founded 2022: 200+ students, 25+ staff, 98% parent satisfaction. Learn about Meru's leading CBC school.",
     },
-    { property: "og:url", content: "https://merutrailblazers.com/about" },
+    {
+      property: "og:image",
+      content: "https://merutrailblazers.com/about-og.png",
+    },
+    {
+      property: "og:image:width",
+      content: "1200",
+    },
+    {
+      property: "og:image:height",
+      content: "630",
+    },
+    {
+      property: "og:url",
+      content: "https://merutrailblazers.com/about",
+    },
+    {
+      property: "og:type",
+      content: "website",
+    },
+
+    // === TWITTER CARDS ===
+    {
+      name: "twitter:card",
+      content: "summary_large_image",
+    },
+    {
+      name: "twitter:title",
+      content: "About Meru Trailblazers Academy",
+    },
+    {
+      name: "twitter:description",
+      content:
+        "Founded 2022: Premier CBC school in Meru with 200+ students and 98% parent satisfaction.",
+    },
+    {
+      name: "twitter:image",
+      content: "https://merutrailblazers.com/twitter-image.jpg",
+    },
+
+    // === SIMPLE STRUCTURED DATA ===
+    {
+      "script:ld+json": {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        name: "About Meru Trailblazers Academy",
+        description:
+          "Learn about Meru's premier CBC school. Founded 2022, 200+ students, 98% parent satisfaction.",
+        url: "https://merutrailblazers.com/about",
+        mainEntity: {
+          "@type": "EducationalOrganization",
+          name: "Meru Trailblazers Academy",
+          foundingDate: "2022",
+          numberOfEmployees: "25+",
+          description: "Premier CBC school in Meru",
+        },
+      },
+    },
   ];
 }
-
 export default function AboutPage() {
   return (
     <div className="font-sans text-gray-800 overflow-hidden">
@@ -111,9 +185,9 @@ export default function AboutPage() {
               className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-12"
             >
               {[
-                { value: "200+", label: "Students", icon: "👨‍🎓" },
+                { value: "300+", label: "Students", icon: "👨‍🎓" },
                 { value: "25+", label: "Dedicated Staff", icon: "👩‍🏫" },
-                { value: "3+", label: "Years Excellence", icon: "🏆" },
+                { value: "5+", label: "Years Excellence", icon: "🏆" },
                 { value: "100%", label: "CBC Compliance", icon: "📚" },
               ].map((stat, index) => (
                 <div key={index} className="text-center">

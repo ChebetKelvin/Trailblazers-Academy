@@ -19,27 +19,121 @@ import {
 import { motion, AnimatePresence } from "framer-motion";
 import { FaLocationDot, FaCircleCheck } from "react-icons/fa6";
 
-// ContactPage.jsx
 export function meta() {
   return [
-    { title: "Contact Meru Trailblazers Academy | Phone, Email & Location" },
+    // === PRIMARY META TAGS ===
+    {
+      title: "Contact Meru Trailblazers Academy | Phone, Email & Location", // 58 chars (optimal)
+    },
     {
       name: "description",
       content:
-        "Contact Meru Trailblazers Academy: 0720 206 783 | info@merutrailblazers.ac.ke. Hours: Mon-Fri 8am-4pm, Sat 9am-1pm. Visit our Meru campus.",
+        "Contact Meru Trailblazers Academy: 0720 206 783 | info@merutrailblazers.ac.ke. Hours: Mon-Fri 8am-4pm, Sat 9am-1pm. Visit our Meru campus.", // 158 chars
     },
     {
       name: "keywords",
       content:
-        "contact Meru Trailblazers, Meru school phone number, Meru school email, Meru school location, Meru Trailblazers address, school contact Meru, Meru school WhatsApp, Meru school Facebook",
+        "contact Meru Trailblazers, Meru school phone number, Meru school email, Meru school location, school contact Meru",
     },
-    { property: "og:title", content: "Contact Us - Meru Trailblazers Academy" },
+
+    // === CRITICAL SEO TAGS ===
+    {
+      name: "robots",
+      content: "index, follow",
+    },
+    {
+      tagName: "link",
+      rel: "canonical",
+      href: "https://merutrailblazers.com/contact",
+    },
+
+    // === OPEN GRAPH TAGS ===
+    {
+      property: "og:title",
+      content:
+        "Contact Us - Meru Trailblazers Academy | Phone, Email & Location",
+    },
     {
       property: "og:description",
       content:
-        "Get in touch with Meru Trailblazers Academy. Phone, email, and location.",
+        "Call 0720 206 783 | Email: info@merutrailblazers.ac.ke. Hours: Mon-Fri 8am-4pm, Sat 9am-1pm. Visit our Meru campus.",
     },
-    { property: "og:url", content: "https://merutrailblazers.com/contact" },
+    {
+      property: "og:image",
+      content: "https://merutrailblazers.com/update1.png",
+    },
+    {
+      property: "og:image:width",
+      content: "1200",
+    },
+    {
+      property: "og:image:height",
+      content: "630",
+    },
+    {
+      property: "og:image:alt",
+      content: "Meru Trailblazers Academy school entrance and campus",
+    },
+    {
+      property: "og:url",
+      content: "https://merutrailblazers.com/contact",
+    },
+    {
+      property: "og:type",
+      content: "website",
+    },
+
+    // === TWITTER CARDS ===
+    {
+      name: "twitter:card",
+      content: "summary_large_image",
+    },
+    {
+      name: "twitter:title",
+      content: "Contact Meru Trailblazers Academy",
+    },
+    {
+      name: "twitter:description",
+      content:
+        "Call 0720 206 783 | Email: info@merutrailblazers.ac.ke | Visit our Meru campus",
+    },
+    {
+      name: "twitter:image",
+      content: "https://merutrailblazers.com/twitter-image.jpg",
+    },
+    {
+      name: "twitter:image:alt",
+      content: "Meru Trailblazers Academy school entrance",
+    },
+
+    // === SIMPLE STRUCTURED DATA ===
+    {
+      "script:ld+json": {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        name: "Contact Meru Trailblazers Academy",
+        url: "https://merutrailblazers.com/contact",
+        description: "Get in touch with Meru Trailblazers Academy",
+        mainEntity: {
+          "@type": "EducationalOrganization",
+          name: "Meru Trailblazers Academy",
+          telephone: "+254720206783",
+          email: "info@merutrailblazers.ac.ke",
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Meru",
+            addressCountry: "KE",
+          },
+          openingHours: ["Mo-Fr 08:00-16:00", "Sa 09:00-13:00"],
+          contactPoint: {
+            "@type": "ContactPoint",
+            telephone: "+254720206783",
+            contactType: "customer service",
+            availableLanguage: ["English", "Swahili"],
+          },
+        },
+      },
+    },
   ];
 }
 

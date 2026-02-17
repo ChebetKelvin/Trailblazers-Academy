@@ -5,20 +5,107 @@ import { FaEye, FaNewspaper, FaTag, FaBookmark } from "react-icons/fa";
 import { Calendar, User, Search, ChevronRight } from "lucide-react";
 import newsData from "../news";
 
-// NewsPage.jsx
 export function meta() {
   return [
-    { title: "Latest News & Updates | Meru Trailblazers Academy" },
+    // === PRIMARY META TAGS ===
+    {
+      title: "Latest News & Updates | Meru Trailblazers Academy", // 48 chars (optimal)
+    },
     {
       name: "description",
       content:
-        "Latest news, events, and achievements from Meru Trailblazers Academy. School announcements, sports updates, and cultural events in Meru.",
+        "Latest news, events, and achievements from Meru Trailblazers Academy. School announcements, sports updates, and cultural events in Meru.", // 158 chars
     },
     {
-      property: "og:title",
-      content: "News & Updates - Meru Trailblazers Academy",
+      name: "keywords",
+      content:
+        "Meru school news, school events Meru, Meru Trailblazers updates, school achievements Meru, education news Meru",
     },
-    { property: "og:url", content: "https://merutrailblazers.com/news" },
+
+    // === CRITICAL SEO TAGS ===
+    {
+      name: "robots",
+      content: "index, follow",
+    },
+    {
+      tagName: "link",
+      rel: "canonical",
+      href: "https://merutrailblazers.com/news",
+    },
+
+    // === OPEN GRAPH TAGS ===
+    {
+      property: "og:title",
+      content: "Latest News & Updates - Meru Trailblazers Academy",
+    },
+    {
+      property: "og:description",
+      content:
+        "Latest news, events, and achievements from Meru Trailblazers Academy. School announcements and updates.",
+    },
+    {
+      property: "og:image",
+      content: "https://merutrailblazers.com/update1.png",
+    },
+    {
+      property: "og:image:width",
+      content: "1200",
+    },
+    {
+      property: "og:image:height",
+      content: "630",
+    },
+    {
+      property: "og:url",
+      content: "https://merutrailblazers.com/news",
+    },
+    {
+      property: "og:type",
+      content: "website",
+    },
+
+    // === TWITTER CARDS ===
+    {
+      name: "twitter:card",
+      content: "summary_large_image",
+    },
+    {
+      name: "twitter:title",
+      content: "Latest News & Updates - Meru Trailblazers Academy",
+    },
+    {
+      name: "twitter:description",
+      content:
+        "Latest news, events, and achievements from Meru Trailblazers Academy.",
+    },
+    {
+      name: "twitter:image",
+      content: "https://merutrailblazers.com/twitter-image.jpg",
+    },
+
+    // === SIMPLE STRUCTURED DATA ===
+    {
+      "script:ld+json": {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        name: "Meru Trailblazers Academy News",
+        description:
+          "Latest news, events, and achievements from Meru Trailblazers Academy",
+        url: "https://merutrailblazers.com/news",
+        hasPart: [
+          {
+            "@type": "Blog",
+            name: "School News Blog",
+            description:
+              "Updates and announcements from Meru Trailblazers Academy",
+          },
+        ],
+        publisher: {
+          "@type": "EducationalOrganization",
+          name: "Meru Trailblazers Academy",
+        },
+      },
+    },
   ];
 }
 
@@ -256,49 +343,6 @@ export default function NewsPage() {
               </button>
             </div>
           )}
-
-          {/* Newsletter Signup */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mt-24"
-          >
-            <div className="bg-gradient-to-br from-slate-900 to-blue-900 rounded-3xl p-8 lg:p-12 text-white overflow-hidden">
-              <div className="relative z-10">
-                <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
-                  <div className="lg:w-2/3">
-                    <h3 className="text-3xl font-bold mb-4">
-                      Never Miss an Update
-                    </h3>
-                    <p className="text-white/80 mb-6 max-w-2xl">
-                      Subscribe to our newsletter and get the latest news,
-                      announcements, and event invitations delivered directly to
-                      your inbox.
-                    </p>
-                  </div>
-                  <div className="lg:w-1/3">
-                    <form className="flex flex-col sm:flex-row gap-4">
-                      <input
-                        type="email"
-                        placeholder="Enter your email"
-                        className="flex-1 px-6 py-3 bg-white/10 backdrop-blur-sm border border-white/30 rounded-xl text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-white/50"
-                      />
-                      <button
-                        type="submit"
-                        className="px-8 py-3 bg-white text-slate-900 font-semibold rounded-xl hover:bg-white/90 transition-colors"
-                      >
-                        Subscribe
-                      </button>
-                    </form>
-                    <p className="text-white/60 text-sm mt-4">
-                      By subscribing, you agree to our Privacy Policy
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
         </div>
       </section>
 

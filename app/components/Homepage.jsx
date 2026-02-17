@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router";
 import {
   FaChalkboardTeacher,
@@ -321,7 +321,7 @@ export default function HomePage() {
               { label: "Certified Teachers", value: "100%" },
               { label: "Safe Environment", value: "24/7" },
               { label: "Parent Satisfaction", value: "98%" },
-              { label: "Years Excellence", value: "3+" },
+              { label: "Years Excellence", value: "5+" },
             ].map((item, index) => (
               <div key={index} className="text-center">
                 <div className="text-3xl font-bold text-[#0097d7] mb-2">

@@ -16,33 +16,112 @@ import {
 } from "react-icons/fa";
 import { motion } from "framer-motion";
 
-// AdmissionPage.jsx
 export function meta() {
   return [
+    // === PRIMARY META TAGS ===
     {
       title:
-        "Admissions 2026 | Meru Trailblazers Academy - Fees & Requirements",
+        "Admissions 2026 | Meru Trailblazers Academy - Fees & Requirements", // 59 chars (optimal)
     },
     {
       name: "description",
       content:
-        "Apply to Meru Trailblazers Academy. Nursery fees: KES 13,000-13,500/term. Primary: KES 14,000-15,000/term. Admission KES 1,000. Call 0720 206 783.",
+        "Apply to Meru Trailblazers Academy. Nursery: KES 13,000-13,500/term. Primary: KES 14,000-15,000/term. Admission KES 1,000. Call 0720 206 783.", // 157 chars
     },
     {
       name: "keywords",
       content:
-        "Meru school admissions, school fees Meru, Creche 2 fees Meru, KG 1 fees Meru, KG 2 fees Meru, Grade 1 fees Meru, Grade 2 fees Meru, Grade 3 fees Meru, Grade 4 fees Meru, Grade 5 fees Meru, Grade 6 fees Meru, nursery school fees Meru, primary school fees Meru",
+        "Meru school admissions, school fees Meru, nursery fees Meru, primary fees Meru, CBC school fees Meru",
+    },
+
+    // === CRITICAL SEO TAGS ===
+    {
+      name: "robots",
+      content: "index, follow",
     },
     {
+      tagName: "link",
+      rel: "canonical",
+      href: "https://merutrailblazers.com/admissions",
+    },
+
+    // === OPEN GRAPH TAGS ===
+    {
       property: "og:title",
-      content: "Admissions 2024 - Meru Trailblazers Academy",
+      content:
+        "Admissions 2026 - Meru Trailblazers Academy | Fees & Requirements",
     },
     {
       property: "og:description",
       content:
-        "Nursery & Primary admissions open. Fees from KES 13,000/term. Apply online.",
+        "Nursery & Primary admissions open. Fees from KES 13,000/term. Call 0720 206 783.",
     },
-    { property: "og:url", content: "https://merutrailblazers.com/admissions" },
+    {
+      property: "og:image",
+      content: "https://merutrailblazers.com/update1.png",
+    },
+    {
+      property: "og:image:width",
+      content: "1200",
+    },
+    {
+      property: "og:image:height",
+      content: "630",
+    },
+    {
+      property: "og:url",
+      content: "https://merutrailblazers.com/admissions",
+    },
+    {
+      property: "og:type",
+      content: "website",
+    },
+
+    // === TWITTER CARDS ===
+    {
+      name: "twitter:card",
+      content: "summary_large_image",
+    },
+    {
+      name: "twitter:title",
+      content: "Admissions 2026 - Meru Trailblazers Academy",
+    },
+    {
+      name: "twitter:description",
+      content: "Nursery & Primary admissions open. Fees from KES 13,000/term.",
+    },
+    {
+      name: "twitter:image",
+      content: "https://merutrailblazers.com/admissions-twitter.jpg",
+    },
+
+    // === SIMPLE STRUCTURED DATA ===
+    {
+      "script:ld+json": {
+        "@context": "https://schema.org",
+        "@type": "EducationEvent",
+        name: "2026 Admissions - Meru Trailblazers Academy",
+        description: "Nursery and Primary school admissions for 2026",
+        startDate: "2026-01-15",
+        endDate: "2026-12-15",
+        location: {
+          "@type": "Place",
+          name: "Meru Trailblazers Academy",
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Meru",
+            addressCountry: "KE",
+          },
+        },
+        offers: {
+          "@type": "AggregateOffer",
+          lowPrice: "13000",
+          highPrice: "15000",
+          priceCurrency: "KES",
+          availability: "https://schema.org/InStock",
+        },
+      },
+    },
   ];
 }
 
@@ -313,7 +392,7 @@ export default function AdmissionPage() {
             {/* Table Header */}
             <div className="bg-gradient-to-r from-[#0097d7] to-blue-600 p-8">
               <h3 className="text-3xl font-bold text-white text-center">
-                2024 Academic Year Fees
+                2026 Academic Year Fees
               </h3>
               <p className="text-white/80 text-center mt-2">
                 All fees are per term and payable in advance
@@ -457,7 +536,6 @@ export default function AdmissionPage() {
                     "Copy of birth certificate",
                     "Two recent passport-sized photographs",
                     "Previous academic report (if applicable)",
-                    "Medical immunization records",
                     "Parent/Guardian national ID copy",
                   ].map((requirement, index) => (
                     <div key={index} className="flex items-start gap-4">

@@ -18,25 +18,118 @@ import {
 } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 
-// GalleryPage.jsx
 export function meta() {
   return [
+    // === PRIMARY META TAGS ===
     {
-      title: "School Gallery | Meru Trailblazers Academy - Photos & Activities",
+      title: "School Gallery | Meru Trailblazers Academy - Photos & Activities", // 58 chars (optimal)
     },
     {
       name: "description",
       content:
-        "Browse 24+ photos of Meru Trailblazers Academy. See our facilities, students, sports, swimming pool, taekwondo, and school life in Meru.",
+        "Browse 24+ photos of Meru Trailblazers Academy. See our facilities, students, sports, swimming pool, taekwondo, and school life in Meru.", // 158 chars
     },
-    { property: "og:title", content: "Gallery - Meru Trailblazers Academy" },
+    {
+      name: "keywords",
+      content:
+        "Meru school photos, school gallery Meru, Meru Trailblazers pictures, school facilities Meru, students activities Meru",
+    },
+
+    // === CRITICAL SEO TAGS ===
+    {
+      name: "robots",
+      content: "index, follow",
+    },
+    {
+      tagName: "link",
+      rel: "canonical",
+      href: "https://merutrailblazers.com/gallery",
+    },
+
+    // === OPEN GRAPH TAGS ===
+    {
+      property: "og:title",
+      content:
+        "School Gallery - Meru Trailblazers Academy | Photos & Activities",
+    },
     {
       property: "og:description",
       content:
-        "View photos of our school facilities, students, and activities in Meru.",
+        "Browse 24+ photos of our facilities, students, sports, and school life in Meru.",
     },
-    { property: "og:url", content: "https://merutrailblazers.com/gallery" },
-    { property: "og:image", content: "https://merutrailblazers.com/fun.jpg" }, // Your best gallery image
+    {
+      property: "og:image",
+      content: "https://merutrailblazers.com/fun.jpg",
+    },
+    {
+      property: "og:image:width",
+      content: "1200",
+    },
+    {
+      property: "og:image:height",
+      content: "630",
+    },
+    {
+      property: "og:image:alt",
+      content: "Students enjoying activities at Meru Trailblazers Academy",
+    },
+    {
+      property: "og:url",
+      content: "https://merutrailblazers.com/gallery",
+    },
+    {
+      property: "og:type",
+      content: "website",
+    },
+
+    // === TWITTER CARDS ===
+    {
+      name: "twitter:card",
+      content: "summary_large_image",
+    },
+    {
+      name: "twitter:title",
+      content: "School Gallery - Meru Trailblazers Academy",
+    },
+    {
+      name: "twitter:description",
+      content:
+        "Browse photos of our facilities, students, and school life in Meru.",
+    },
+    {
+      name: "twitter:image",
+      content: "https://merutrailblazers.com/fun.jpg",
+    },
+    {
+      name: "twitter:image:alt",
+      content: "Students enjoying activities at Meru Trailblazers Academy",
+    },
+
+    // === SIMPLE STRUCTURED DATA ===
+    {
+      "script:ld+json": {
+        "@context": "https://schema.org",
+        "@type": "ImageGallery",
+        name: "Meru Trailblazers Academy Photo Gallery",
+        description:
+          "Browse 24+ photos of our school facilities, students, sports, and activities",
+        url: "https://merutrailblazers.com/gallery",
+        numberOfItems: "24",
+        image: [
+          {
+            "@type": "ImageObject",
+            url: "https://merutrailblazers.com/fun.jpg",
+            caption:
+              "Students enjoying activities at Meru Trailblazers Academy",
+            representativeOfPage: "true",
+          },
+        ],
+        publisher: {
+          "@type": "EducationalOrganization",
+          name: "Meru Trailblazers Academy",
+        },
+      },
+    },
   ];
 }
 
