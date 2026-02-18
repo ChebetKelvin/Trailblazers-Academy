@@ -141,10 +141,10 @@ export default function GalleryPage() {
 
   // Gallery categories with icons and counts
   const categories = [
-    { id: "all", name: "All", icon: <FaCamera />, count: 24 },
-    { id: "academics", name: "Academics", icon: <FaBookOpen />, count: 8 },
-    { id: "sports", name: "Sports", icon: <FaFutbol />, count: 6 },
-    { id: "events", name: "Events", icon: <FaUsers />, count: 5 },
+    { id: "all", name: "All", icon: <FaCamera />, count: 21 },
+    { id: "academics", name: "Academics", icon: <FaBookOpen />, count: 5 },
+    { id: "sports", name: "Sports", icon: <FaFutbol />, count: 5 },
+    { id: "events", name: "Events", icon: <FaUsers />, count: 6 },
     { id: "activities", name: "Activities", icon: <FaMusic />, count: 5 },
   ];
 
@@ -280,7 +280,7 @@ export default function GalleryPage() {
     {
       src: "/images/image4.png",
       title: "Music Practice",
-      category: "arts",
+      category: "activities",
       description: "Singing and learning musical instruments",
       date: "2024-03-15",
       likes: 67,
