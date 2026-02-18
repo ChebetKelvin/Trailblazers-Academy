@@ -154,7 +154,7 @@ export default function GalleryPage() {
       title: "School Transportation",
       category: "events",
       description: "Our safe and reliable school bus service",
-      date: "2024-03-15",
+      date: "2025-03-15",
       likes: 24,
     },
     {
@@ -162,7 +162,7 @@ export default function GalleryPage() {
       title: "Sports Day",
       category: "sports",
       description: "Annual inter-house sports competition",
-      date: "2024-02-10",
+      date: "2025-02-10",
       likes: 42,
     },
     {
@@ -170,7 +170,7 @@ export default function GalleryPage() {
       title: "Martial Arts Training",
       category: "sports",
       description: "Taekwondo classes for self-defense",
-      date: "2024-01-20",
+      date: "2025-01-20",
       likes: 38,
     },
     {
@@ -178,7 +178,7 @@ export default function GalleryPage() {
       title: "Chess Club",
       category: "activities",
       description: "Strategic thinking and concentration",
-      date: "2024-03-05",
+      date: "2025-03-05",
       likes: 29,
     },
     {
@@ -186,7 +186,7 @@ export default function GalleryPage() {
       title: "Interactive Learning",
       category: "academics",
       description: "Students engaged in classroom activities",
-      date: "2024-02-28",
+      date: "2025-02-28",
       likes: 56,
     },
     {
@@ -194,7 +194,7 @@ export default function GalleryPage() {
       title: "Physical Education",
       category: "sports",
       description: "Fun and fitness on the playground",
-      date: "2024-03-12",
+      date: "2025-03-12",
       likes: 31,
     },
     {
@@ -202,7 +202,7 @@ export default function GalleryPage() {
       title: "Nature Exploration",
       category: "activities",
       description: "Outdoor learning adventures",
-      date: "2024-02-15",
+      date: "2025-02-15",
       likes: 47,
     },
     {
@@ -210,7 +210,7 @@ export default function GalleryPage() {
       title: "Swimming Lessons",
       category: "sports",
       description: "Water safety and swimming skills",
-      date: "2024-01-25",
+      date: "2025-01-25",
       likes: 52,
     },
     {
@@ -218,7 +218,7 @@ export default function GalleryPage() {
       title: "Annual Fun Day",
       category: "events",
       description: "Games and celebrations",
-      date: "2024-03-08",
+      date: "2025-03-08",
       likes: 68,
     },
     {
@@ -226,7 +226,7 @@ export default function GalleryPage() {
       title: "Class Photo",
       category: "academics",
       description: "Proud students of Grade 5",
-      date: "2024-02-20",
+      date: "2025-02-20",
       likes: 45,
     },
     {
@@ -234,7 +234,7 @@ export default function GalleryPage() {
       title: "Teacher Training",
       category: "academics",
       description: "Professional development workshop",
-      date: "2024-01-30",
+      date: "2025-01-30",
       likes: 37,
     },
     {
@@ -242,7 +242,7 @@ export default function GalleryPage() {
       title: "Playtime",
       category: "activities",
       description: "Creative play and social interaction",
-      date: "2024-03-01",
+      date: "2025-03-01",
       likes: 61,
     },
     {
@@ -250,7 +250,7 @@ export default function GalleryPage() {
       title: "Students Stage Performance",
       category: "events",
       description: "Annual talent show and performances",
-      date: "2024-02-18",
+      date: "2025-02-18",
       likes: 74,
     },
     {
@@ -258,7 +258,7 @@ export default function GalleryPage() {
       title: "Sports Day",
       category: "sports",
       description: "Fun competitions and teamwork activities",
-      date: "2024-03-10",
+      date: "2025-03-10",
       likes: 89,
     },
     {
@@ -266,7 +266,7 @@ export default function GalleryPage() {
       title: "School facilities",
       category: "activities",
       description: "Our school facilities",
-      date: "2026-01-25",
+      date: "2026-02-16",
       likes: 56,
     },
     {
@@ -274,7 +274,7 @@ export default function GalleryPage() {
       title: "Graduation Day",
       category: "academics",
       description: "graduation day",
-      date: "2024-02-05",
+      date: "2025-02-05",
       likes: 48,
     },
     {
@@ -282,7 +282,7 @@ export default function GalleryPage() {
       title: "Music Practice",
       category: "activities",
       description: "Singing and learning musical instruments",
-      date: "2024-03-15",
+      date: "2025-03-15",
       likes: 67,
     },
     {
@@ -290,7 +290,7 @@ export default function GalleryPage() {
       title: "Our Director's",
       category: "academics",
       description: "School director's in graduation day",
-      date: "2024-02-28",
+      date: "2025-02-28",
       likes: 82,
     },
     {
@@ -298,7 +298,7 @@ export default function GalleryPage() {
       title: "Morning Assembly",
       category: "events",
       description: "Daily prayers, announcements, and motivation",
-      date: "2024-01-15",
+      date: "2025-01-15",
       likes: 45,
     },
     {
@@ -306,7 +306,7 @@ export default function GalleryPage() {
       title: "Field Trip",
       category: "events",
       description: "Outdoor learning and exploration",
-      date: "2024-03-22",
+      date: "2025-03-22",
       likes: 93,
     },
     {
@@ -314,7 +314,7 @@ export default function GalleryPage() {
       title: "Graduation Day",
       category: "events",
       description: "Celebrating student achievements",
-      date: "2024-04-01",
+      date: "2025-04-01",
       likes: 120,
     },
   ];
