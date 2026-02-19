@@ -143,7 +143,7 @@ export default function Hero() {
         {/* School image with sophisticated overlay */}
         <div className="absolute inset-0">
           <img
-            src="/school2.jpg"
+            src="/school2.webp"
             alt="Meru Trailblazers Academy Students"
             className="w-full h-full object-cover"
           />
