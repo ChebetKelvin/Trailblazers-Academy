@@ -563,7 +563,7 @@ export default function AboutPage() {
                 French, fun clubs, and playtime — all designed to nurture creativity, develop 
                 talents, and build confidence beyond the classroom. Our co-curricular program 
                 helps every learner explore their passions and grow holistically.`,
-                image: "/swing.jpg",
+                image: "/karate.jpg",
                 align: "left",
               },
             ].map((item, index) => (
