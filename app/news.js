@@ -57,8 +57,22 @@ const newsData = [
     title: "New Modern Facilities Now Open",
     date: "February 12, 2026",
     desc: "We are proud to unveil our newly completed infrastructure designed to enhance learning and comfort.",
-    fullDesc:
-      "Our school has successfully completed major infrastructure upgrades, introducing modern classrooms, improved sanitation facilities, upgraded staff offices, and well-equipped learning spaces. These developments are part of our commitment to providing a safe, comfortable, and inspiring environment for our learners.",
+    fullDesc: `
+Meru Trailblazers Academy is proud to announce the successful completion of major infrastructure upgrades designed to provide a modern, safe, and inspiring learning environment for our learners in Meru.
+
+As part of our continuous commitment to delivering quality CBC education, the school has invested in spacious and well-ventilated classrooms that promote focus, creativity, and effective learning. Each classroom has been designed with improved lighting, proper airflow, and modern furniture to ensure comfort for every learner.
+
+In addition to classroom upgrades, the school has introduced modern sanitation facilities equipped with improved hygiene systems. Clean and safe washrooms are essential for maintaining a healthy school environment, and these improvements reflect our dedication to student well-being.
+
+Our administrative offices have also been upgraded to create a more efficient and welcoming space for parents, staff, and visitors. These improvements enhance communication, coordination, and overall service delivery within the school.
+
+The newly upgraded learning spaces now include improved desks, chairs, teaching boards, and educational materials that align with the Competency-Based Curriculum (CBC). These facilities support interactive learning and encourage students to develop practical skills, confidence, and creativity.
+
+At Meru Trailblazers Academy, we believe that a great environment inspires great learning. These modern facilities are part of our long-term vision to remain one of the leading CBC schools in Meru, providing high-quality education in a secure and student-friendly setting.
+
+Parents and guardians are welcome to visit the school and experience the new facilities firsthand. We remain committed to continuous improvement as we shape the future of our learners.
+`,
+
     category: "Facilities",
     author: "School Administration",
     views: 462,
