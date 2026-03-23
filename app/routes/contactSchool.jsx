@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import {
   FaPhone,
   FaEnvelope,
@@ -18,6 +18,7 @@ import {
 } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaLocationDot, FaCircleCheck } from "react-icons/fa6";
+import emailjs from "@emailjs/browser";
 
 export function meta() {
   return [
@@ -142,6 +143,8 @@ export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
 
+  const formRef = useRef();
+
   const toggleFAQ = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
@@ -150,16 +153,25 @@ export default function ContactPage() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    try {
+      await emailjs.sendForm(
+        "service_mc3shsb", // from EmailJS
+        "template_uemmmiv", // contact template
+        formRef.current, // form reference
+        "dOOPtlrMOwUQ757MN", // public key
+      );
+
+      setFormSubmitted(true);
+      e.target.reset();
+    } catch (error) {
+      console.error("Email error:", error);
+      alert("Failed to send message. Try again.");
+    }
 
     setIsSubmitting(false);
-    setFormSubmitted(true);
 
-    // Reset form after 3 seconds
     setTimeout(() => {
       setFormSubmitted(false);
-      e.target.reset();
     }, 3000);
   };
 
@@ -488,8 +500,7 @@ export default function ContactPage() {
 
                 {/* Contact Form */}
                 <form
-                  action="https://formspree.io/f/mjkvbqze"
-                  method="POST"
+                  ref={formRef}
                   className="space-y-8"
                   onSubmit={handleSubmit}
                 >
@@ -501,7 +512,7 @@ export default function ContactPage() {
                       </div>
                       <input
                         type="text"
-                        name="name"
+                        name="user_name"
                         placeholder="Your Full Name"
                         required
                         className="w-full pl-12 pr-4 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#0097d7] focus:border-transparent"
@@ -515,7 +526,7 @@ export default function ContactPage() {
                       </div>
                       <input
                         type="email"
-                        name="email"
+                        name="user_email"
                         placeholder="Your Email Address"
                         required
                         className="w-full pl-12 pr-4 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#0097d7] focus:border-transparent"
