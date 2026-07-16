@@ -126,7 +126,7 @@ export default function Footer() {
                 className="hover:underline focus:outline-none focus:underline"
                 aria-label="Email us: info@merutrailblazers.ac.ke"
               >
-                info@merutrailblazers.ac.ke
+                merutrailblazers@gmail.com
               </a>
             </p>
           </address>

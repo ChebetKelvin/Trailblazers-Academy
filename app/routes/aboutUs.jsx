@@ -23,12 +23,12 @@ export function meta() {
   return [
     // === PRIMARY META TAGS ===
     {
-      title: "About Meru Trailblazers Academy | Mission, Vision & Values", // 58 chars (optimal)
+      title: "About Meru Trailblazers Academy | Mission, Vision & Values",
     },
     {
       name: "description",
       content:
-        "Founded 2022: Premier CBC school in Meru with 200+ students, 25+ staff, 98% parent satisfaction. Discover our mission, vision & values.", // 158 chars
+        "Founded 2022: Premier CBC school in Meru with 200+ students, 25+ staff, 98% parent satisfaction. Discover our mission, vision & values.",
     },
     {
       name: "keywords",
@@ -117,85 +117,89 @@ export function meta() {
     },
   ];
 }
+
 export default function AboutPage() {
   return (
-    <div className="font-sans text-gray-800 overflow-hidden">
+    <div className="font-sans text-slate-800 bg-gradient-to-b from-slate-50 via-white to-blue-50/60">
+      {/* Font import — move into your root layout once shared across pages */}
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&display=swap');
+        .font-display { font-family: 'Fraunces', ui-serif, Georgia, serif; }
+      `}</style>
+
       {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
-        {/* Background with parallax effect */}
+      <section className="relative min-h-[75vh] flex items-center justify-center overflow-hidden">
+        {/* Background */}
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-700 to-blue-600 opacity-90"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-[#0B1220] via-[#0d2b4e] to-[#0097d7]"></div>
           <img
             src="/twitter-image.jpg"
             alt="Meru Trailblazers Academy Campus"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover opacity-30"
           />
-          {/* Multi-layered overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/40 to-transparent"></div>
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-transparent via-black/30 to-black/60"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0B1220]/80 via-[#0B1220]/40 to-transparent"></div>
         </div>
 
-        {/* Animated decorative elements */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-[#fb0269]/20 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-[#ffdd00]/20 rounded-full blur-3xl"></div>
-        </div>
-
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="space-y-8"
+            transition={{ duration: 0.7 }}
+            className="space-y-7"
           >
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full border border-white/30">
-              <FaStar className="text-[#ffdd00]" />
-              <span className="text-white font-semibold">Since 2022</span>
+            <div className="inline-flex items-center gap-2 px-5 py-2 bg-white/10 border border-white/15 rounded-full">
+              <FaStar className="text-[#ffdd00] text-sm" />
+              <span className="text-white/90 text-xs font-semibold tracking-wide uppercase">
+                Since 2022
+              </span>
             </div>
 
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight">
+            <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-medium leading-[1.05]">
               <span className="text-white block">About Our</span>
-              <motion.span
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.3, duration: 0.8 }}
-                className="bg-gradient-to-r from-[#ffdd00] via-yellow-400 to-[#ffdd00] bg-clip-text text-transparent block"
-              >
+              <span className="bg-gradient-to-r from-[#ffdd00] to-amber-300 bg-clip-text text-transparent block">
                 Academy
-              </motion.span>
+              </span>
             </h1>
 
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.6, duration: 0.8 }}
-              className="text-xl lg:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed font-light"
+            {/* Motto — the standout moment */}
+            <motion.div
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.7 }}
+              className="flex items-center justify-center gap-4 pt-2"
             >
+              <span className="h-px w-10 sm:w-16 bg-[#ffdd00]/50"></span>
+              <p className="font-display italic text-xl sm:text-2xl text-[#ffdd00] tracking-wide whitespace-nowrap">
+                "A Tradition of Excellence"
+              </p>
+              <span className="h-px w-10 sm:w-16 bg-[#ffdd00]/50"></span>
+            </motion.div>
+
+            <p className="text-lg lg:text-xl text-white/75 max-w-2xl mx-auto leading-relaxed font-light pt-2">
               Nurturing young minds, building strong values, and preparing
               innovative leaders for tomorrow's world through holistic
               education.
-            </motion.p>
+            </p>
 
             {/* Stats */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.9, duration: 0.8 }}
-              className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-12"
+              transition={{ delay: 0.6, duration: 0.7 }}
+              className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-10 max-w-2xl mx-auto border-t border-white/10 mt-6"
             >
               {[
-                { value: "300+", label: "Students", icon: "👨‍🎓" },
-                { value: "25+", label: "Dedicated Staff", icon: "👩‍🏫" },
-                { value: "5+", label: "Years Excellence", icon: "🏆" },
-                { value: "100%", label: "CBC Compliance", icon: "📚" },
+                { value: "300+", label: "Students" },
+                { value: "25+", label: "Dedicated Staff" },
+                { value: "5+", label: "Years Excellence" },
+                { value: "100%", label: "CBC Compliance" },
               ].map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-3xl mb-2">{stat.icon}</div>
-                  <div className="text-3xl font-bold text-white">
+                <div key={index} className="text-center pt-6">
+                  <div className="font-display text-2xl font-semibold text-white">
                     {stat.value}
                   </div>
-                  <div className="text-white/80 text-sm">{stat.label}</div>
+                  <div className="text-white/60 text-xs mt-1">{stat.label}</div>
                 </div>
               ))}
             </motion.div>
@@ -204,26 +208,23 @@ export default function AboutPage() {
       </section>
 
       {/* Who We Are */}
-      <section className="py-20 bg-gradient-to-b from-white to-blue-50/50">
+      <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
+              initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               className="space-y-8"
             >
               <div>
-                <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#0097d7]/10 rounded-full mb-6">
-                  <div className="w-2 h-2 bg-[#0097d7] rounded-full"></div>
-                  <span className="text-sm font-semibold text-[#0097d7]">
-                    Our Story
-                  </span>
-                </div>
-                <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-                  Who <span className="text-[#0097d7]">We Are</span>
+                <span className="text-xs font-semibold tracking-wide text-[#0097d7] uppercase">
+                  Our Story
+                </span>
+                <h2 className="font-display text-3xl lg:text-4xl font-medium text-slate-900 mt-3 mb-5">
+                  Who We Are
                 </h2>
-                <p className="text-lg lg:text-xl text-gray-600 leading-relaxed">
+                <p className="text-lg text-slate-500 leading-relaxed">
                   Meru Trailblazers Academy is more than just a school — it's a
                   vibrant community where learning comes alive. We provide a
                   nurturing environment where children feel safe, valued, and
@@ -232,7 +233,7 @@ export default function AboutPage() {
               </div>
 
               {/* Key Points */}
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-x-6 gap-y-3">
                 {[
                   "Safe & Secure Environment",
                   "Holistic Development",
@@ -241,56 +242,64 @@ export default function AboutPage() {
                   "Modern Facilities",
                   "Parent Partnership",
                 ].map((point, index) => (
-                  <div key={index} className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-[#0097d7] rounded-full"></div>
-                    <span className="text-gray-700 font-medium">{point}</span>
+                  <div key={index} className="flex items-center gap-2.5">
+                    <div className="w-1.5 h-1.5 bg-[#0097d7] rounded-full flex-shrink-0"></div>
+                    <span className="text-slate-600 text-sm font-medium">
+                      {point}
+                    </span>
                   </div>
                 ))}
               </div>
 
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-3 px-8 py-4 bg-[#0097d7] text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group"
+                className="inline-flex items-center gap-3 px-8 py-4 bg-[#0097d7] text-white font-semibold rounded-full shadow-md hover:shadow-lg hover:bg-[#0082ba] transition-all duration-300 group"
               >
                 <span>Schedule a Campus Tour</span>
-                <FaArrowRight className="group-hover:translate-x-2 transition-transform" />
+                <FaArrowRight className="text-sm group-hover:translate-x-1 transition-transform" />
               </Link>
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
+              initial={{ opacity: 0, scale: 0.96 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               className="relative"
             >
               {/* Main Image with Frame */}
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+              <div className="relative rounded-3xl overflow-hidden shadow-xl">
                 <img
                   src="/students.jpg"
                   alt="Happy students at Meru Trailblazers Academy"
-                  className="w-full h-[500px] object-cover"
+                  className="w-full h-[460px] object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0B1220]/25 to-transparent"></div>
               </div>
 
               {/* Floating Card */}
               <motion.div
-                animate={{ y: [0, -10, 0] }}
-                transition={{ repeat: Infinity, duration: 3 }}
-                className="absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-2xl p-6 max-w-xs"
+                animate={{ y: [0, -8, 0] }}
+                transition={{
+                  repeat: Infinity,
+                  duration: 3.5,
+                  ease: "easeInOut",
+                }}
+                className="absolute -bottom-6 -right-4 sm:-right-6 bg-white rounded-2xl shadow-lg p-5 max-w-xs border border-slate-100"
               >
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 bg-[#0097d7] rounded-full flex items-center justify-center text-white">
-                    <FaHeart />
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 bg-[#0097d7]/10 rounded-full flex items-center justify-center text-[#0097d7]">
+                    <FaHeart className="text-sm" />
                   </div>
                   <div>
-                    <div className="font-bold text-gray-900">98%</div>
-                    <div className="text-sm text-gray-600">
+                    <div className="font-display font-semibold text-slate-900 leading-none">
+                      98%
+                    </div>
+                    <div className="text-xs text-slate-500 mt-1">
                       Parent Satisfaction
                     </div>
                   </div>
                 </div>
-                <p className="text-sm text-gray-700 italic">
+                <p className="text-sm text-slate-600 italic leading-snug">
                   "A home away from home where our child thrives every day."
                 </p>
               </motion.div>
@@ -300,53 +309,45 @@ export default function AboutPage() {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-24 bg-gradient-to-br from-blue-50 via-white to-blue-50/50">
+      <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#0097d7]/10 rounded-full mb-6">
-              <FaLightbulb className="text-[#ffdd00]" />
-              <span className="text-sm font-semibold text-[#0097d7]">
-                Our Foundation
-              </span>
-            </div>
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-              Mission & <span className="text-[#0097d7]">Vision</span>
+            <span className="text-xs font-semibold tracking-wide text-[#0097d7] uppercase">
+              Our Foundation
+            </span>
+            <h2 className="font-display text-3xl lg:text-4xl font-medium text-slate-900 mt-3">
+              Mission & Vision
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg text-slate-500 max-w-2xl mx-auto mt-4">
               The guiding principles that shape our educational approach
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-8">
+          <div className="grid lg:grid-cols-2 gap-6">
             {/* Mission Card */}
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
+              initial={{ opacity: 0, x: -16 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="relative group"
             >
-              <div className="absolute -inset-4 bg-gradient-to-r from-[#0097d7] to-blue-500 rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
-              <div className="relative bg-white rounded-2xl p-8 lg:p-12 shadow-xl hover:shadow-2xl transition-all duration-300 border border-blue-100">
-                <div className="w-16 h-16 bg-gradient-to-br from-[#0097d7] to-blue-600 rounded-2xl flex items-center justify-center mb-8">
-                  <FaTarget className="text-white text-2xl" />
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 lg:p-10 border border-slate-100 shadow-sm h-full border-t-4 border-t-[#0097d7]">
+                <div className="w-14 h-14 bg-[#0097d7]/10 rounded-2xl flex items-center justify-center mb-7">
+                  <FaTarget className="text-[#0097d7] text-xl" />
                 </div>
-                <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-6">
+                <h3 className="font-display text-2xl font-semibold text-slate-900 mb-4">
                   Our Mission
                 </h3>
-                <p className="text-lg text-gray-600 leading-relaxed mb-8">
+                <p className="text-slate-500 leading-relaxed mb-8">
                   To empower children with comprehensive knowledge, creativity,
                   and core values that prepare them for academic excellence and
                   a fulfilling, purpose-driven life.
                 </p>
-                <div className="pt-6 border-t border-gray-100">
-                  <h4 className="font-semibold text-[#0097d7] mb-3">
-                    Key Focus Areas:
-                  </h4>
+                <div className="pt-6 border-t border-slate-100">
                   <div className="flex flex-wrap gap-2">
                     {[
                       "Academic Excellence",
@@ -356,7 +357,7 @@ export default function AboutPage() {
                     ].map((item, index) => (
                       <span
                         key={index}
-                        className="px-3 py-1 bg-blue-50 text-[#0097d7] rounded-full text-sm"
+                        className="px-3 py-1 bg-[#0097d7]/8 text-[#0097d7] rounded-full text-xs font-medium"
                       >
                         {item}
                       </span>
@@ -368,28 +369,23 @@ export default function AboutPage() {
 
             {/* Vision Card */}
             <motion.div
-              initial={{ opacity: 0, x: 30 }}
+              initial={{ opacity: 0, x: 16 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="relative group"
             >
-              <div className="absolute -inset-4 bg-gradient-to-r from-[#fb0269] to-pink-500 rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
-              <div className="relative bg-white rounded-2xl p-8 lg:p-12 shadow-xl hover:shadow-2xl transition-all duration-300 border border-pink-100">
-                <div className="w-16 h-16 bg-gradient-to-br from-[#fb0269] to-pink-500 rounded-2xl flex items-center justify-center mb-8">
-                  <FaEye className="text-white text-2xl" />
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 lg:p-10 border border-slate-100 shadow-sm h-full border-t-4 border-t-[#fb0269]">
+                <div className="w-14 h-14 bg-[#fb0269]/10 rounded-2xl flex items-center justify-center mb-7">
+                  <FaEye className="text-[#fb0269] text-xl" />
                 </div>
-                <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-6">
+                <h3 className="font-display text-2xl font-semibold text-slate-900 mb-4">
                   Our Vision
                 </h3>
-                <p className="text-lg text-gray-600 leading-relaxed mb-8">
+                <p className="text-slate-500 leading-relaxed mb-8">
                   To raise confident, compassionate, and innovative leaders who
                   will positively transform their communities and make
                   meaningful contributions to the global society.
                 </p>
-                <div className="pt-6 border-t border-gray-100">
-                  <h4 className="font-semibold text-[#fb0269] mb-3">
-                    Future Goals:
-                  </h4>
+                <div className="pt-6 border-t border-slate-100">
                   <div className="flex flex-wrap gap-2">
                     {[
                       "Global Citizens",
@@ -399,7 +395,7 @@ export default function AboutPage() {
                     ].map((item, index) => (
                       <span
                         key={index}
-                        className="px-3 py-1 bg-pink-50 text-[#fb0269] rounded-full text-sm"
+                        className="px-3 py-1 bg-[#fb0269]/8 text-[#fb0269] rounded-full text-xs font-medium"
                       >
                         {item}
                       </span>
@@ -412,95 +408,113 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Motto Band — full-width standout moment */}
+      <section className="relative py-20 bg-gradient-to-br from-[#0B1220] via-[#0d2b4e] to-[#0097d7] overflow-hidden">
+        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="space-y-4"
+          >
+            <span className="text-xs font-semibold tracking-[0.2em] text-white/50 uppercase">
+              Our Motto
+            </span>
+            <p className="font-display italic text-3xl sm:text-4xl lg:text-5xl text-[#ffdd00] leading-snug">
+              "A Tradition of Excellence"
+            </p>
+            <div className="flex justify-center pt-2">
+              <span className="h-px w-24 bg-white/20"></span>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Core Values */}
-      <section className="py-24 bg-gradient-to-b from-white to-gray-50">
+      <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#0097d7]/10 rounded-full mb-6">
-              <FaShieldAlt className="text-[#0097d7]" />
-              <span className="text-sm font-semibold text-[#0097d7]">
-                Our Foundation
-              </span>
-            </div>
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-              Our Core <span className="text-[#0097d7]">Values</span>
+            <span className="text-xs font-semibold tracking-wide text-[#0097d7] uppercase">
+              Our Foundation
+            </span>
+            <h2 className="font-display text-3xl lg:text-4xl font-medium text-slate-900 mt-3">
+              Our Core Values
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg text-slate-500 max-w-2xl mx-auto mt-4">
               The principles that guide every aspect of our educational approach
             </p>
           </motion.div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                icon: <FaTrophy className="text-3xl" />,
+                icon: <FaTrophy />,
                 title: "Excellence",
                 desc: "Striving for the highest standards in academics, character, and personal development.",
-                color: "from-blue-500 to-blue-600",
+                accent: "#0097d7",
                 tags: ["Quality", "Achievement", "Standards"],
               },
               {
-                icon: <FaHandsHelping className="text-3xl" />,
+                icon: <FaHandsHelping />,
                 title: "Integrity",
                 desc: "Building honesty, responsibility, and ethical behavior in every learner.",
-                color: "from-emerald-500 to-emerald-600",
+                accent: "#0B1220",
                 tags: ["Honesty", "Ethics", "Responsibility"],
               },
               {
-                icon: <FaLightbulb className="text-3xl" />,
+                icon: <FaLightbulb />,
                 title: "Creativity",
                 desc: "Encouraging curiosity, innovation, and out-of-the-box thinking.",
-                color: "from-amber-500 to-amber-600",
+                accent: "#ffdd00",
                 tags: ["Innovation", "Curiosity", "Expression"],
               },
               {
-                icon: <FaHeart className="text-3xl" />,
+                icon: <FaHeart />,
                 title: "Care",
                 desc: "Providing a loving, safe, and supportive environment for all.",
-                color: "from-rose-500 to-rose-600",
+                accent: "#fb0269",
                 tags: ["Compassion", "Safety", "Support"],
               },
             ].map((value, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="group"
+                transition={{ delay: index * 0.08 }}
               >
-                <div className="h-full bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100">
-                  {/* Gradient Header */}
-                  <div className={`h-3 bg-gradient-to-r ${value.color}`}></div>
+                <div className="h-full bg-white/80 backdrop-blur-sm rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow duration-300 p-7">
+                  <div
+                    className="w-12 h-12 rounded-xl flex items-center justify-center mb-6 text-lg"
+                    style={{
+                      backgroundColor: `${value.accent}14`,
+                      color: value.accent,
+                    }}
+                  >
+                    {value.icon}
+                  </div>
 
-                  {/* Content */}
-                  <div className="p-8">
-                    <div className="w-16 h-16 bg-gradient-to-br from-gray-100 to-white rounded-2xl flex items-center justify-center mb-6 shadow-inner">
-                      {/* CORRECT - Applies gradient only to the icon */}
-                      <div className={"text-3xl "}>{value.icon}</div>
-                    </div>
+                  <h3 className="font-display text-lg font-semibold text-slate-900 mb-2">
+                    {value.title}
+                  </h3>
+                  <p className="text-sm text-slate-500 leading-relaxed mb-5">
+                    {value.desc}
+                  </p>
 
-                    <h3 className="text-xl font-bold text-gray-900 mb-4">
-                      {value.title}
-                    </h3>
-                    <p className="text-gray-600 mb-6">{value.desc}</p>
-
-                    {/* Tags */}
-                    <div className="flex flex-wrap gap-2">
-                      {value.tags.map((tag, tagIndex) => (
-                        <span
-                          key={tagIndex}
-                          className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
+                  <div className="flex flex-wrap gap-1.5">
+                    {value.tags.map((tag, tagIndex) => (
+                      <span
+                        key={tagIndex}
+                        className="px-2.5 py-1 bg-slate-50 text-slate-500 rounded-full text-[11px] font-medium"
+                      >
+                        {tag}
+                      </span>
+                    ))}
                   </div>
                 </div>
               </motion.div>
@@ -510,58 +524,58 @@ export default function AboutPage() {
       </section>
 
       {/* Detailed Sections */}
-      <section className="py-24 bg-gradient-to-b from-gray-50 to-white">
+      <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-16">
+          <div className="space-y-20">
             {[
               {
-                icon: <FaSchool className="text-3xl" />,
+                icon: <FaSchool />,
                 title: "Our Journey",
-                desc: `Founded in 2022, Meru Trailblazers Academy was born from a vision to create 
-                a school where children not only love learning but also grow with strong values, 
-                discipline, and curiosity. From our humble beginnings, we've continued to nurture 
+                desc: `Founded in 2022, Meru Trailblazers Academy was born from a vision to create
+                a school where children not only love learning but also grow with strong values,
+                discipline, and curiosity. From our humble beginnings, we've continued to nurture
                 young minds with excellence, care, and a commitment to holistic education.`,
                 image: "/schoollife.jpg",
                 align: "left",
               },
               {
-                icon: <FaBookOpen className="text-3xl" />,
+                icon: <FaBookOpen />,
                 title: "Academic Approach",
-                desc: `At our school, we offer a well-structured learning journey across 
-                two main levels — Pre-Primary (Creche 2, KG 1, KG 2) and Primary (Grade 1–Grade 6). 
-                Our curriculum follows the Competency-Based Curriculum (CBC) enriched with 
-                creative, experiential teaching. With small class sizes, every learner 
-                receives personalized attention, while interactive lessons inspire curiosity, 
+                desc: `At our school, we offer a well-structured learning journey across
+                two main levels — Pre-Primary (Creche 2, KG 1, KG 2) and Primary (Grade 1–Grade 6).
+                Our curriculum follows the Competency-Based Curriculum (CBC) enriched with
+                creative, experiential teaching. With small class sizes, every learner
+                receives personalized attention, while interactive lessons inspire curiosity,
                 teamwork, and confidence that lasts beyond the classroom.`,
                 image: "/academics.jpg",
                 align: "right",
               },
               {
-                icon: <FaLaptop className="text-3xl" />,
+                icon: <FaLaptop />,
                 title: "Facilities & Environment",
-                desc: `Our learning environment is purposefully designed to support both academic 
-                and personal growth. We offer a well-equipped computer lab, modern library, 
-                spacious and well-lit classrooms, and secure playgrounds that encourage active play. 
+                desc: `Our learning environment is purposefully designed to support both academic
+                and personal growth. We offer a well-equipped computer lab, modern library,
+                spacious and well-lit classrooms, and secure playgrounds that encourage active play.
                 Every space is crafted to inspire creativity, collaboration, and holistic development.`,
                 image: "/update2.png",
                 align: "left",
               },
               {
-                icon: <FaChalkboardTeacher className="text-3xl" />,
+                icon: <FaChalkboardTeacher />,
                 title: "Our Teachers & Staff",
-                desc: `Our dedicated team of teachers and support staff are the heart of our school. 
-                Each educator is passionate about nurturing potential, guiding learners with 
-                patience, creativity, and professionalism. Together, they create an engaging 
+                desc: `Our dedicated team of teachers and support staff are the heart of our school.
+                Each educator is passionate about nurturing potential, guiding learners with
+                patience, creativity, and professionalism. Together, they create an engaging
                 and supportive environment where every child feels valued and inspired to excel.`,
                 image: "/staff2.jpg",
                 align: "right",
               },
               {
-                icon: <FaFutbol className="text-3xl" />,
+                icon: <FaFutbol />,
                 title: "Extracurricular Activities",
-                desc: `We offer a vibrant mix of sports, arts, music, dance, taekwondo, swimming, 
-                French, fun clubs, and playtime — all designed to nurture creativity, develop 
-                talents, and build confidence beyond the classroom. Our co-curricular program 
+                desc: `We offer a vibrant mix of sports, arts, music, dance, taekwondo, swimming,
+                French, fun clubs, and playtime — all designed to nurture creativity, develop
+                talents, and build confidence beyond the classroom. Our co-curricular program
                 helps every learner explore their passions and grow holistically.`,
                 image: "/karate.jpg",
                 align: "left",
@@ -569,48 +583,41 @@ export default function AboutPage() {
             ].map((item, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
+                transition={{ delay: index * 0.08 }}
                 className={`grid lg:grid-cols-2 gap-12 items-center ${item.align === "right" ? "lg:grid-flow-dense" : ""}`}
               >
                 <div
                   className={`${item.align === "right" ? "lg:col-start-2" : ""}`}
                 >
-                  <div className="inline-flex items-center gap-3 mb-6">
-                    <div className="w-12 h-12 bg-[#0097d7]/10 rounded-xl flex items-center justify-center">
-                      <div className="text-[#0097d7]">{item.icon}</div>
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-11 h-11 bg-[#0097d7]/10 rounded-xl flex items-center justify-center text-[#0097d7]">
+                      {item.icon}
                     </div>
-                    <div className="text-sm font-semibold text-[#0097d7] bg-[#0097d7]/10 px-4 py-2 rounded-full">
-                      Section {index + 1}
-                    </div>
+                    <span className="text-xs font-semibold text-slate-400 tracking-wide uppercase">
+                      Section {String(index + 1).padStart(2, "0")}
+                    </span>
                   </div>
 
-                  <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+                  <h3 className="font-display text-2xl lg:text-3xl font-medium text-slate-900 mb-5">
                     {item.title}
                   </h3>
 
-                  <p className="text-lg text-gray-600 leading-relaxed mb-8">
-                    {item.desc}
-                  </p>
+                  <p className="text-slate-500 leading-relaxed">{item.desc}</p>
                 </div>
 
                 <div
                   className={`relative ${item.align === "right" ? "lg:col-start-1" : ""}`}
                 >
-                  <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+                  <div className="relative rounded-3xl overflow-hidden shadow-lg">
                     <img
                       src={item.image}
                       alt={item.title}
-                      className="w-full h-[400px] object-cover"
+                      className="w-full h-[360px] object-cover"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
-                  </div>
-
-                  {/* Decorative Element */}
-                  <div className="absolute -top-6 -right-6 w-24 h-24 bg-[#ffdd00] rounded-2xl rotate-12 shadow-lg flex items-center justify-center">
-                    <div className="text-white font-bold">{index + 1}</div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0B1220]/20 to-transparent"></div>
                   </div>
                 </div>
               </motion.div>
@@ -620,55 +627,53 @@ export default function AboutPage() {
       </section>
 
       {/* Final CTA */}
-      <section className="relative py-24 bg-gradient-to-br from-[#0097d7] via-blue-600 to-blue-800 text-white overflow-hidden">
-        {/* Background Elements */}
-        <div className="absolute inset-0">
-          <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-white/10 to-transparent"></div>
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMzAgMTVjLTguMjg0IDAtMTUgNi43MTYtMTUgMTVzNi43MTYgMTUgMTUgMTUgMTUtNi43MTYgMTUtMTUtNi43MTYtMTUtMTUtMTV6IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMSIvPjwvc3ZnPg==')] opacity-5"></div>
+      <section className="relative py-24 bg-gradient-to-br from-[#0B1220] via-[#0d2b4e] to-[#0097d7] text-white overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-10 left-10 w-72 h-72 bg-[#ffdd00]/5 rounded-full blur-3xl"></div>
         </div>
 
-        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="space-y-8"
           >
-            <div className="inline-flex items-center gap-2 px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full">
-              <FaUsers className="text-[#ffdd00]" />
-              <span className="font-semibold">Join Our Community</span>
+            <div className="inline-flex items-center gap-2 px-5 py-2 bg-white/10 border border-white/20 rounded-full">
+              <FaUsers className="text-[#ffdd00] text-sm" />
+              <span className="text-sm font-medium">Join Our Community</span>
             </div>
 
-            <h2 className="text-4xl lg:text-5xl font-bold leading-tight">
+            <h2 className="font-display text-4xl lg:text-5xl font-medium leading-tight">
               Ready to Join Our
-              <span className="block text-[#ffdd00] mt-2">
+              <span className="block text-[#ffdd00] mt-1">
                 Educational Family?
               </span>
             </h2>
 
-            <p className="text-xl opacity-95 max-w-2xl mx-auto">
+            <p className="text-lg text-white/75 max-w-xl mx-auto">
               Enroll your child today and give them the foundation for a
               successful future.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
               <Link
                 to="/admissions"
-                className="group px-10 py-4 bg-white text-[#0097d7] font-bold rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-3"
+                className="group px-9 py-4 bg-white text-[#0097d7] font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-3"
               >
                 <span>Begin Enrollment Process</span>
-                <FaArrowRight className="group-hover:translate-x-2 transition-transform" />
+                <FaArrowRight className="text-sm group-hover:translate-x-1 transition-transform" />
               </Link>
 
               <Link
                 to="/contact"
-                className="px-10 py-4 bg-white/10 backdrop-blur-sm border border-white/30 text-white font-bold rounded-full hover:bg-white/20 transition-all duration-300"
+                className="px-9 py-4 bg-white/10 border border-white/20 text-white font-semibold rounded-full hover:bg-white/20 transition-all duration-300"
               >
                 Schedule a Visit
               </Link>
             </div>
 
-            <p className="text-white/70 text-sm pt-8">
+            <p className="text-white/50 text-xs pt-6 tracking-wide uppercase">
               Limited spots available for the upcoming academic year
             </p>
           </motion.div>
